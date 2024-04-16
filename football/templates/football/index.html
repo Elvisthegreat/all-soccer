@@ -1,20 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
+{% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Views Part 1</title>
-</head>
-
-<body>
-    <h1>Football list</h1>
-    {% for ball in object_list %}
-    <h2>{{ball.title}}</h2>
-    <p>{{ball.excerpt}}</p>
-    <p>Author: {{ball.author}}</p>
-    {% endfor %}
-</body>
-
-</html>
+<!-- index.html content starts here -->
+{% block content %}
+<div class="card text-center">
+    <div class="card-header">
+        {% for ball in football_list %}
+      Featured
+    
+      <h1>A week of champions league</h1>
+    </div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
+  {% endfor %}
+<!-- index.html content ends here -->
+{% endblock %}
