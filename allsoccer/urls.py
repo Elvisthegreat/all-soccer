@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from football.views import football_soccer
 
 urlpatterns = [
+    path('football/', football_soccer, name='football'),
     path('admin/', admin.site.urls),
 ]
