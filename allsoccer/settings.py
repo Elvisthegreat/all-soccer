@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'football',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -89,10 +90,12 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://*.codeanyapp.com",
-    "https://*.herokuapp.com"
-]
+# CSRF_TRUSTED_ORIGINS = [
+#     "https://*.codeanyapp.com",
+#     "https://*.herokuapp.com"
+# ]
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-elvisthegreat-allsoccer-6art7lhb9jj.ws-eu110.gitpod.io']
 
 
 # Password validation
