@@ -16,11 +16,12 @@ body{
 }
 
 .hover-color:hover{
-    color: rgba(255, 68, 0, 0.903);
+    color:  rgb(131, 177, 61);
 }
 
 .hover-color-bg:hover{
-    background: rgba(255, 68, 0, 0.903);
+    background:  rgb(131, 177, 61);
+    padding: 9px;
 }
 
 .all{
@@ -29,7 +30,6 @@ body{
 }
 
 #slash{
-    height: 20px;
     font-weight: 300;
     color: red;
 }
