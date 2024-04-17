@@ -11,6 +11,11 @@
     <!--web title-->
     <title>All Soccer</title>
 
+    <!-- Google Fonts CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
@@ -27,9 +32,9 @@
 <body>
 
     <!--Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light  color-green bg-dark text-white py-4">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white py-4 font-caveat">
       <div class="container-fluid">
-        <a class="navbar-brand text-white" href="{% url 'home' %}">All Soccer</a>
+        <a class="navbar-brand text-white" href="{% url 'home' %}"><span class="all">All </span> <span id="slash">/</span> <span class="all"> Soccers</span></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -37,12 +42,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link text-white {% if request.path == home_url %}active" aria-current="page{% endif %}"
+              <a class="nav-link text-white hover-color-bg {% if request.path == home_url %}active" aria-current="page{% endif %}"
               href="{% url 'home' %}">Home</a>
             </li>
             
             <li class="nav-item active">
-              <a class="nav-link text-white {% if request.path == official_url %}active" aria-current="page{% endif %}"
+              <a class="nav-link text-white hover-color-bg {% if request.path == official_url %}active" aria-current="page{% endif %}"
               href="{% url 'official' %}">Official</a>
             </li>
             
@@ -71,10 +76,10 @@
               </div>
               <div class="col-md-6 text-md-right">
                   <!-- Social links -->
-                  <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Visit our facebook page" class="text-white mx-2"><i class="fab fa-facebook"></i></a>
-                  <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Visit our twitter page" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
-                  <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Visit our instagram page" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
-                  <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Visit our youtube page" class="text-white mx-2"><i class="fab fa-linkedin"></i></a>
+                  <a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Visit our facebook page" class="text-white mx-2" ><i class="fab fa-facebook hover-color"></i></a>
+                  <a href="https://www.twitter.com" target="_blank" rel="noopener" aria-label="Visit our twitter page" class="text-white mx-2"><i class="fab fa-twitter hover-color"></i></a>
+                  <a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Visit our instagram page" class="text-white mx-2"><i class="fab fa-instagram hover-color"></i></a>
+                  <a href="https://www.youtube.com" target="_blank" rel="noopener" aria-label="Visit our youtube page" class="text-white mx-2"><i class="fab fa-linkedin hover-color"></i></a>
               </div>
           </div>
       </div>
