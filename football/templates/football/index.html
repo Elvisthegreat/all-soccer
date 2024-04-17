@@ -4,7 +4,34 @@
 <!-- index.html content starts here -->
 {% block content %}
 
-      <h1>A week of champions league</h1>
+<div class="card text-center">
+      <div class="card-header">
+        Features
+      </div>
+      <div class="card-body">
+        <h2 class="card-title">A week of champions league</h2>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <div class="container">
+            {% for ball in football_list %}
+            <div class="row row-cols-7 styled-padding">
+              <div class="col"><a href="{% url 'football_history' ball.slug %}">
+                  <img src="{% static 'images/barca.jpeg' %}" alt="barca logo">
+              </a></div> vs
+              <div class="col">Column</div>
+
+              <div class="col">Column</div> vs
+              <div class="col">Column</div> 
+
+              <div class="col">Column</div> vs
+              <div class="col">Column</div> 
+              
+            </div>
+            {% endfor %}
+          </div>
+      </div>
+      <div class="card-footer text-muted">
+      </div>
+    </div>
     
 <!-- index.html content ends here -->
 {% endblock %}

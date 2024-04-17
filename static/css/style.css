@@ -34,8 +34,11 @@ body{
     color: red;
 }
 
-
 #main-content{
     min-height: 100vh;
     flex: 1 0 auto;
+}
+
+.styled-padding{
+    padding: 1em;
 }
