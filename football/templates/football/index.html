@@ -4,7 +4,7 @@
 <!-- index.html content starts here -->
 {% block content %}
 
-<div class="card text-center">
+<div class="card text-center add-bottom-padding">
       <div class="card-header">
         Features
       </div>
@@ -16,12 +16,12 @@
             <div class="row row-cols-7 styled-padding board">
               <div class="col">
                 <a href="{% url 'football_history' ball.slug %}">
-                  <img class="size-image" id="size-image-barca" src="{% static 'images/barcelona.logo.jpg' %}" alt="barca logo">
+                  <img class="size-image size-image-logo" src="{% static 'images/barcelona.logo.jpg' %}" alt="barca logo">
               </a>
-            </div> vs 
+            </div> vs
               <div class="col">
                 <a href="{% url 'football_history' ball.slug %}">
-                <img class="size-image" src="{% static 'images/psg.jpeg' %}" alt="barca logo">
+                <img class="size-image size-image-logo" id="size-psg-logo" src="{% static 'images/psg.jpeg' %}" alt="barca logo">
             </a>
           </div>
 
