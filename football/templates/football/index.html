@@ -15,9 +15,11 @@
             {% for ball in football_list %}
             <div class="row row-cols-7 styled-padding">
               <div class="col"><a href="{% url 'football_history' ball.slug %}">
-                  <img src="{% static 'images/barca.jpeg' %}" alt="barca logo">
-              </a></div> vs
-              <div class="col">Column</div>
+                  <img class="size-image" src="{% static 'images/barca.jpg' %}" alt="barca logo">
+              </a></div> vs 
+              <div class="col"><a href="{% url 'football_history' ball.slug %}">
+                <img class="size-image" src="{% static 'images/psg.jpeg' %}" alt="barca logo">
+            </a></div>
 
               <div class="col">Column</div> vs
               <div class="col">Column</div> 
