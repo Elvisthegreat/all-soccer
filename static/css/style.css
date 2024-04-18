@@ -34,6 +34,11 @@ body{
     color: red;
 }
 
+#size-image-barca{
+    height: 50px;
+    width: 90px;
+}
+
 .size-image{
     height: 60px;
     width: 100px;
@@ -46,4 +51,20 @@ body{
 
 .styled-padding{
     padding: 1em;
+}
+
+/*Media query*/
+
+@media screen and (max-width: 767px) {
+    .board {
+        display: flex;
+        flex-wrap: wrap; /* Allow columns to wrap to the next row */
+        justify-content: center;
+        gap: 2em; /* Add some spacing between columns */
+    }
+    .col {
+        flex: 1; /* Distribute available space evenly among columns */
+        max-width: calc(33.33% - 1em); /* Set maximum width for each column */
+
+    }
 }
