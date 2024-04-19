@@ -61,6 +61,10 @@ body{
     padding: 1em;
 }
 
+.left{
+    text-align: right;
+}
+
 /*Media query*/
 
 @media screen and (max-width: 767px) {

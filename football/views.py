@@ -11,15 +11,16 @@ class FootballList(generic.ListView):
     paginate_by = 6
 
 
-def football_history(request, slug):
+def football_preview(request, slug):
     queryset = Football.objects.all()
     ball = get_object_or_404(queryset, slug=slug)
 
     return render(
         request,
-        "football/football_history.html",
+        "football/football_preview.html",
 
         {
             'ball': ball,
         },
     )
+

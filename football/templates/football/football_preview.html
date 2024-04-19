@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+
+<div class="card text-center">
+    <div class="card-header">
+      <Strong><h1>Vote for your team:</h1></Strong>
+    </div>
+    <div class="card-body">
+      <h3 class="card-title">{{ ball.title }} </h3>
+      <p class="card-text"> {{ ball.content | safe }} </p>
+    </div>
+    <div class="card-footer text-muted">
+    </div>
+    <p class="left"><em>Created on:</em> {{ ball.created_on }} </p>
+  </div>
+
+{% endblock content %}
