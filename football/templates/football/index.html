@@ -13,7 +13,8 @@
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         <div class="container">
             {% for ball in football_list %}
-            <div class="row row-cols-7 styled-padding board">
+            <!-- First Match -->
+            <div class="row styled-padding board">
                   <div class="col">
                     <a href="{% url 'football_preview' ball.slug %}">
                       <img class="size-image size-image-logo" src="{% static 'images/barcelonalogo.jpg' %}" alt="barca logo">
@@ -24,15 +25,35 @@
                     <a href="{% url 'football_preview' ball.slug %}">
                       <img class="size-image size-image-logo" id="size-psg-logo" src="{% static 'images/psg.jpeg' %}" alt="psg logo">
                     </a>
-          </div>
-        
-
-              <div class="col">Column</div> vs
-              <div class="col">Column</div> 
-
-              <div class="col">Column</div> vs
-              <div class="col">Column</div> 
-              
+                  </div>
+            </div>
+            <!-- Second Match -->
+            <div class="row styled-padding board">
+                <div class="col">
+                    <a href="{% url 'football_preview' ball.slug %}">
+                      <img class="size-image size-image-logo" src="{% static 'images/real madrid.png' %}" alt="barca logo">
+                    </a>
+                </div>
+                vs
+                <div class="col">
+                    <a href="{% url 'football_preview' ball.slug %}">
+                      <img class="size-image size-image-logo" id="size-psg-logo" src="{% static 'images/man city.jpeg' %}" alt="psg logo">
+                    </a>
+                </div>
+            </div>
+            <!-- Third Match -->
+            <div class="row styled-padding board">
+                <div class="col">
+                    <a href="{% url 'football_preview' ball.slug %}">
+                      <img class="size-image size-image-logo" src="{% static 'images/new castle.png' %}" alt="barca logo">
+                    </a>
+                </div>
+                vs
+                <div class="col">
+                    <a href="{% url 'football_preview' ball.slug %}">
+                      <img class="size-image size-image-logo" id="size-psg-logo" src="{% static 'images/chelsea.png' %}" alt="psg logo">
+                    </a>
+                </div>
             </div>
             {% endfor %}
           </div>
@@ -43,4 +64,3 @@
     
 <!-- index.html content ends here -->
 {% endblock %}
-
