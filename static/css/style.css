@@ -50,6 +50,11 @@ body{
     width: 100px;
 }
 
+.madrid7-png{
+    height: 78px;
+    width: 60px;
+}
+
 
 
 #main-content{
@@ -88,5 +93,9 @@ body{
     #size-psg-logo{
         height: 60px;
         width: 77px;
+    }
+    .madrid7-png{
+        height: 78px;
+        width: 60px;
     }
 }
