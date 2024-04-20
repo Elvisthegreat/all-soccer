@@ -11,14 +11,38 @@ class FootballList(generic.ListView):
     paginate_by = 6
 
 
-def football_preview(request, slug):
+def preview1(request, slug):
     queryset = Football.objects.all()
     ball = get_object_or_404(queryset, slug=slug)
 
     return render(
         request,
-        "football/football_preview.html",
+        "football/preview1.html",
 
+        {
+            'ball': ball,
+        },
+    )
+
+
+def preview2(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request, 'football/preview2.html',
+
+        {
+            'ball': ball,
+        },
+    )
+
+def preview3(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request, 'football/preview3.html',
         {
             'ball': ball,
         },
