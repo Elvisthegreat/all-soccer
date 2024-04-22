@@ -48,3 +48,35 @@ def preview3(request, slug):
         },
     )
 
+def preview4(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request, 'football/preview4.html',
+        {
+            'ball': ball,
+        },
+    )
+
+def preview5(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request, 'football/preview5.html',
+        {
+            'ball': ball,
+        },
+    )
+
+def preview6(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request, 'football/preview6.html',
+        {
+            'ball': ball,
+        },
+    )

@@ -4,10 +4,10 @@
 <!-- index.html content starts here -->
 {% block content %}
 
-<div class="card text-center add-bottom-padding">
-      <div class="card-header">
-        Features
-      </div>
+<div class="card text-center add-bottom-padding color-white">
+      
+       <h3>Features</h3>
+      
       <div class="card-body">
         <h2 class="card-title">A week of champions league</h2>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
@@ -17,7 +17,7 @@
             <div class="row styled-padding board">
                   <div class="col">
                     <a href="{% url 'preview1' ball.slug %}">
-                      <img class="size-image size-image-logo" src="{% static 'images/barcelonalogo.jpg' %}" alt="barca logo">
+                      <img class="size-image size-image-logo barca-logo" src="{% static 'images/barcelonalogo.jpg' %}" alt="barca logo">
                     </a>
                   </div>
                   vs
@@ -31,13 +31,13 @@
             <div class="row styled-padding board">
                 <div class="col">
                     <a href="{% url 'preview2' ball.slug %}">
-                      <img class="size-image size-image-logo madrid7-png" src="{% static 'images/real madrid.png' %}" alt="barca logo">
+                      <img class="size-image size-image-logo madrid7-png" src="{% static 'images/real madrid.png' %}" alt="real madrid logo">
                     </a>
                 </div>
                 vs
                 <div class="col">
                     <a href="{% url 'preview2' ball.slug %}">
-                      <img class="size-image size-image-logo madrid7-png" id="size-psg-logo" src="{% static 'images/man city.jpeg' %}" alt="psg logo">
+                      <img class="size-image size-image-logo madrid7-png" id="size-psg-logo" src="{% static 'images/man city.jpeg' %}" alt="mancity logo">
                     </a>
                 </div>
             </div>
@@ -45,20 +45,60 @@
             <div class="row styled-padding board">
                 <div class="col">
                     <a href="{% url 'preview3' ball.slug %}">
-                      <img class="size-image size-image-logo " src="{% static 'images/new castle.png' %}" alt="barca logo">
+                      <img class="size-image size-image-logo new-castle-logo-size" src="{% static 'images/new castle.png' %}" alt="new castle logo">
                     </a>
                 </div>
                 vs
                 <div class="col">
                     <a href="{% url 'preview3' ball.slug %}">
-                      <img class="size-image size-image-logo chelsea-jpg" id="size-psg-logo" src="{% static 'images/chelsea-logo.jpg' %}" alt="psg logo">
+                      <img class="size-image size-image-logo chelbvb-size" src="{% static 'images/chelsea-logo.jpg' %}" alt="chelsea logo">
                     </a>
                 </div>
             </div>
-            {% endfor %}
+            <!-- Fourth Match -->
+            <div class="row styled-padding board">
+              <div class="col">
+                  <a href="{% url 'preview4' ball.slug %}">
+                    <img class="size-image size-image-logo monaco-png" src="{% static 'images/bayern-munich.png' %}" alt="new castle logo">
+                  </a>
+              </div>
+              vs
+              <div class="col">
+                  <a href="{% url 'preview4' ball.slug %}">
+                    <img class="size-image size-image-logo porto-png" src="{% static 'images/Arsenal-logo.jpg' %}" alt="chelsea logo">
+                  </a>
+              </div>
+          </div>
+          <!-- Firth Match -->
+          <div class="row styled-padding board">
+            <div class="col">
+                <a href="{% url 'preview5' ball.slug %}">
+                  <img class="size-image size-image-logo chelbvb-size" src="{% static 'images/bvb.png' %}" alt="bvb logo">
+                </a>
+            </div>
+            vs
+            <div class="col">
+                <a href="{% url 'preview5' ball.slug %}">
+                  <img class="size-image size-image-logo inter-png" src="{% static 'images/inter-milan-logo.png' %}" alt="inter milan logo">
+                </a>
+            </div>
+        </div>
+        <!-- Sixth Match -->
+        <div class="row styled-padding board">
+          <div class="col">
+              <a href="{% url 'preview6' ball.slug %}">
+                <img class="size-image size-image-logo madrid7-png" src="{% static 'images/lpool.jpeg' %}" alt="liver pool logo">
+              </a>
+          </div>
+          vs
+          <div class="col">
+              <a href="{% url 'preview6' ball.slug %}">
+                <img class="size-image size-image-logo porto-png" src="{% static 'images/Porto-logo.png' %}" alt="Porto logo">
+              </a>
           </div>
       </div>
-      <div class="card-footer text-muted">
+            {% endfor %}
+          </div>
       </div>
     </div>
     

@@ -9,24 +9,24 @@
       <h3 class="card-title marg-top">{{ ball.title }} </h3>
       <div class="row styled-padding board">
         <div class="col">
-            <a href="{% url 'preview2' ball.slug %}">
-              <img class="size-image size-image-logo madrid7-png" src="{% static 'images/barcelonalogo.jpg' %}" alt="barca logo">
+            <a href="{% url 'preview3' ball.slug %}">
+                <img class="size-image size-image-logo chelbvb-size" src="{% static 'images/bvb.png' %}" alt="bvb logo">
             </a>
-            <h3 class="marg-top">Barcelona</h3>
+            <h3 class="marg-top">BVB</h3>
         </div>
         vs
         <div class="col">
-            <a href="{% url 'preview2' ball.slug %}">
-              <img class="size-image size-image-logo madrid7-png" id="size-psg-logo" src="{% static 'images/psg.jpeg' %}" alt="psg logo">
+            <a href="{% url 'preview3' ball.slug %}">
+                <img class="size-image size-image-logo inter-png" src="{% static 'images/inter-milan-logo.png' %}" alt="inter milan logo">
             </a>
-            <h3 class="marg-top">Paris Saint-Germain</h3>
+            <h3 class="marg-top">Inter Milan</h3>
         </div>
     </div>
     </div>
     <div class="card-footer text-muted">
     </div>
     <h6 class="card-text marg-top"> {{ ball.content | safe }} </h6>
-    <p class="left margin-top"><em>Created on:</em> {{ ball.created_on }} </p>
+    <p class="left color-white"><em>Created on:</em> {{ ball.created_on }} </p>
   </div>
 
 {% endblock content %}

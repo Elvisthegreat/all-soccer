@@ -4,13 +4,13 @@ body{
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.7);
     
     font-family: lora, Arial, Helvetica, sans-serif;
 }
 
 .section-background-image{
-    background: url('../images/soccer-stadium-night.jpg') no-repeat center /cover;
+    background: url('../images/soccer-stadium.jpg') no-repeat center /cover;
 }
 
 .font-caveat{
@@ -42,13 +42,20 @@ body{
 }
 
 .add-bottom-padding{
+    background-color: rgb(211, 210, 210, 0.0);
     padding-bottom: 4rem;
     margin-top: 3em;
+    padding: 3em;
 }
 
 .color-white{
     margin-top: 18px;
     color: #fff;
+    padding: 13px;
+}
+
+.marg-top{
+    margin-top: 18px;
 }
 
 .size-image-logo{
@@ -67,9 +74,34 @@ body{
     width: 60px;
 }
 
-.chelsea-jpg{
-    height: 89px;
+.monaco-png{
+    height: 76px;
+    width: 79px;
+}
+
+.barca-logo{
+    height: 66px;
+    width: 67px;
+}
+
+.chelbvb-size{
+    height: 60px;
     width: 60px;
+}
+
+.new-castle-logo-size{
+    height: 70px;
+    width: 80px;
+}
+
+.inter-png{
+    height: 66px;
+    width: 67px
+}
+
+.porto-png{
+    height: 79px;
+    width: 125px;
 }
 
 #main-content{
@@ -113,4 +145,10 @@ body{
         height: 78px;
         width: 60px;
     }
+
+    .porto-png{
+        height: 75px;
+        width: 79px;
+    }
+
 }
