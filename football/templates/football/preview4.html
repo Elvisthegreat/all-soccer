@@ -9,17 +9,17 @@
       <h3 class="card-title marg-top">{{ ball.title }} </h3>
       <div class="row styled-padding board">
         <div class="col">
-            <a href="{% url 'preview3' ball.slug %}">
+            <a href="{% url 'preview4' ball.slug %}">
                 <img class="size-image size-image-logo monaco-png" src="{% static 'images/bayern-munich.png' %}" alt="new castle logo">
             </a>
-            <h3 class="marg-top">Bayern Munich</h3>
+            <h3 class="marg-top small-name">Bayern Munich</h3>
         </div>
         vs
         <div class="col">
-            <a href="{% url 'preview3' ball.slug %}">
+            <a href="{% url 'preview4' ball.slug %}">
               <img class="size-image size-image-logo chelsea-jpg" id="size-psg-logo" src="{% static 'images/Arsenal-logo.jpg' %}" alt="psg logo">
             </a>
-            <h3 class="marg-top">Arsenal</h3>
+            <h3 class="marg-top small-name">Arsenal</h3>
         </div>
     </div>
     </div>

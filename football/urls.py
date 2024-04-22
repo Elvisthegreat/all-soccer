@@ -11,4 +11,6 @@ urlpatterns = [
     path('preview5/<slug:slug>/', views.preview5, name='preview5'),
     path('preview6/<slug:slug>/', views.preview6, name='preview6'),
 
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+
 ]

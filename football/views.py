@@ -80,3 +80,15 @@ def preview6(request, slug):
             'ball': ball,
         },
     )
+
+    # Club history section
+
+def barcelona_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/barcelona_history.html',
+        {
+            'ball': ball,
+        },
+    )
