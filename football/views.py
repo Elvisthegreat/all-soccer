@@ -124,34 +124,43 @@ def man_city_history(request, slug):
            'ball': ball,
         },
    )
+def newcastle_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/newcastle_history.html',
+        {
+           'ball': ball,
+        },
+   )
 
-# def club_history(request, slug):
-#     """
-#     View function to display football club history based on the club name.
-#     :param request: HTTP request
-#     :param slug: Unique identifier for the football club
-#     :param club_name: Name of the football club (e.g., 'barcelona', 'psg', etc.)
-#     :return: Rendered template with relevant data
-#     """
-#     queryset = Football.objects.all()
-#     ball = get_object_or_404(queryset, slug=slug)
+def chelsea_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/chelsea_history.html',
+        {
+           'ball': ball,
+        },
+   )
 
-#     # Dictionary mapping slugs to template names
-#     templates = {
-#         'barcelona': 'football/barcelona_history.html',
-#         'psg': 'football/psg_history.html',
-#         'real_madrid': 'football/real_madrid_history.html',
-#         'man_city': 'football/man_city_history.html',
-#     }
+def bayern_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/bayern_history.html',
+        {
+           'ball': ball,
+        },
+   )
 
-#     # If the slug is not found in the templates dictionary, raise a 404 error
-#     if slug not in templates:
-#         raise Http404("No template found for the given slug.")
-#     template = templates[slug]
+def arsenal_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/arsenal_history.html',
+        {
+           'ball': ball,
+        },
+   )
 
-#     return render(
-#         request, template,
-#         {
-#             'ball': ball,
-#         },
-#     )

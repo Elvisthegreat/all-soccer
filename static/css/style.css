@@ -26,6 +26,43 @@ body{
     background-attachment: fixed;
 }
 
+.history-background-real_madrid{
+    background: url('../images/real_bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-man-city{
+    background: url('../images/man-bg.jpeg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-newcastle{
+    background: url('../images/newcastle-bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-chelsea{
+    background: url('../images/chel-bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+
+}
+
+.history-background-bayern{
+    background: url('../images/bayern-bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-arsenal{
+    background: url('../images/arsenal-bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
 .font-caveat{
     font-family: caveat, Arial;
     font-weight: 700 ;
