@@ -14,8 +14,14 @@ body{
 }
 
 /*History background image*/
-.history-background-image{
+.history-background-barca{
     background: url('../images/barca\ background.jpeg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-psg{
+    background: url('../images/paris-back.jpg') no-repeat center /cover;
     height: 100%;
     background-attachment: fixed;
 }

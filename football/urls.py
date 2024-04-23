@@ -12,5 +12,15 @@ urlpatterns = [
     path('preview6/<slug:slug>/', views.preview6, name='preview6'),
 
     path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
-
+    path('psg_history/<slug:slug>/', views.psg_history, name='psg_history'),
+    path('real_madrid_history/<slug:slug>/', views.real_madrid_history, name='real_madrid_history'),
+    path('man_City_history/<slug:slug>/', views.man_city_history, name='man_city_history'),
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
 ]
