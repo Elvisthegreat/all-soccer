@@ -1,0 +1,252 @@
+body{
+    min-height: 100vh;
+    background: url('../images/image-poster.jpg')no-repeat center /cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+    font-family: lora, Arial, Helvetica, sans-serif;
+}
+/*Previews sections background image*/
+.section-background-image{
+    background: url('../images/soccer-stadium.jpg') no-repeat center /cover;
+}
+
+/*History background image*/
+.history-background-barca{
+    background: url('../images/barca\ background.jpeg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-psg{
+    background: url('../images/paris-back.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-real_madrid{
+    background: url('../images/real_bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-man-city{
+    background: url('../images/man-bg.jpeg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-newcastle{
+    background: url('../images/newcastle-bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-chelsea{
+    background: url('../images/chel-bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+
+}
+
+.history-background-bayern{
+    background: url('../images/bayern-bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-arsenal{
+    background: url('../images/arsenal-bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-bvb{
+    background: url('../images/bvb_bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-inter-milan{
+    background: url('../images/inter-bg.jpg');
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-lpool{
+    background: url('../images/pool-bg.jpg');
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-porto{
+    background: url('../images/fc-porto-bg.jpg');
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.font-caveat{
+    font-family: caveat, Arial;
+    font-weight: 700 ;
+    font-size:25px ;
+    padding-left: 14px;
+    padding-right: 14px;
+
+}
+
+.hover-color:hover{
+    color:  rgb(131, 177, 61);
+}
+
+.hover-color-bg:hover{
+    background:  rgb(131, 177, 61);
+    padding: 9px;
+}
+
+.all{
+    color: rgb(131, 177, 61);
+    font-size:25px ;
+}
+
+#slash{
+    font-weight: 300;
+    color: red;
+}
+
+.add-bottom-padding {
+    width: 50%;
+    margin: 1em auto;
+    padding: 3em;
+}
+
+.color-white{
+    margin-top: 18px;
+    padding: 13px;
+}
+
+.white-color-text{
+    color: #fff;
+}
+
+.text-color{
+    color: #fff;
+    padding: 1em;
+}
+
+.marg-top{
+    margin-top: 18px;
+}
+
+.size-image-logo{
+    height: 50px;
+    width: 90px;
+    margin-right: 10px;
+}
+
+#size-psg-logo{
+    height: 60px;
+    width: 100px;
+}
+
+.madrid7-png{
+    height: 78px;
+    width: 60px;
+}
+
+.monaco-png{
+    height: 76px;
+    width: 79px;
+}
+
+.barca-logo{
+    height: 66px;
+    width: 67px;
+}
+
+.chelbvb-size{
+    height: 60px;
+    width: 60px;
+}
+
+.new-castle-logo-size{
+    height: 70px;
+    width: 80px;
+}
+
+.inter-png{
+    height: 66px;
+    width: 67px
+}
+
+.porto-png{
+    height: 79px;
+    width: 125px;
+}
+
+#main-content{
+    min-height: 100vh;
+    flex: 1 0 auto;
+}
+
+.styled-padding{
+    padding: 1em;
+}
+
+.left{
+    text-align: right;
+}
+
+/*Media query*/
+
+@media screen and (max-width: 767px) {
+    .board {
+        display: flex;
+        flex-wrap: wrap; /* Allow columns to wrap to the next row */
+        justify-content: center;
+        gap: 2.5em; /* Add some spacing between columns */
+    }
+    .col {
+        flex: 1; /* Distribute available space evenly among columns */
+        max-width: calc(33.33% - 1em); /* Set maximum width for each column */
+
+    }
+
+    .size-image{
+        height: 60px;
+        width: 60px;
+    }
+
+    #size-psg-logo{
+        height: 60px;
+        width: 77px;
+    }
+    .madrid7-png{
+        height: 78px;
+        width: 60px;
+    }
+
+    .porto-png{
+        height: 75px;
+        width: 79px;
+    }
+
+    .marg-top {
+        margin-top: 1em; /* Add some space above each h3 */
+    }
+
+    .small-name {
+        white-space: normal; /* Allow text to wrap */
+        line-height: 1.2; /* Adjust line height for better readability */
+        max-width: 100%; /* Ensure the name does not exceed the container width */
+        font-size: 15px; /* Adjust font size if necessary */
+    }
+
+    .add-bottom-padding {
+        width: 100%; /* Full width on small screens */
+        margin:  auto; /* Center the element */
+        padding: 1em; /* Reduced padding for smaller screens */
+    }
+
+}
