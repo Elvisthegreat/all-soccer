@@ -19,8 +19,8 @@ urlpatterns = [
     path('chelsea_history/<slug:slug>/', views.chelsea_history, name='chelsea_history'),
     path('bayern_history/<slug:slug>/', views.bayern_history, name='bayern_history'),
     path('arsenal_history/<slug:slug>/', views.arsenal_history, name='arsenal_history'),
-    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
-    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
-    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
-    path('barcelona_history/<slug:slug>/', views.barcelona_history, name='barcelona_history'),
+    path('bvb_history/<slug:slug>/', views.bvb_history, name='bvb_history'),
+    path('inter_milan_history/<slug:slug>/', views.inter_milan_history, name='inter_milan_history'),
+    path('lpool_history/<slug:slug>/', views.lpool_history, name='lpool_history'),
+    path('porto_history/<slug:slug>/', views.porto_history, name='porto_history'),
 ]

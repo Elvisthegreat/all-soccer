@@ -9,12 +9,16 @@
       <h3 class="card-title marg-top">{{ ball.title }} </h3>
       <div class="row styled-padding board">
         <div class="col">
+          <a href="{% url 'lpool_history' ball.slug %}">
                 <img class="size-image size-image-logo madrid7-png" src="{% static 'images/lpool.jpeg' %}" alt="liver pool logo">
+          </a>
             <h3 class="marg-top small-name">Liver Pool</h3>
         </div>
         vs
         <div class="col">
+          <a href="{% url 'porto_history' ball.slug %}">
                 <img class="size-image size-image-logo porto-png" src="{% static 'images/Porto-logo.png' %}" alt="Porto logo">
+          </a>
             <h3 class="marg-top small-name">Fc Porto</h3>
         </div>
     </div>

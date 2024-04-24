@@ -164,3 +164,43 @@ def arsenal_history(request, slug):
         },
    )
 
+def bvb_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/bvb_history.html',
+        {
+           'ball': ball,
+        },
+   )
+
+def inter_milan_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/inter_milan_history.html',
+        {
+           'ball': ball,
+        },
+   )
+
+def lpool_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/lpool_history.html',
+        {
+           'ball': ball,
+        },
+   )
+
+def porto_history(request, slug):
+    queryset = Football.objects.all()
+    ball = get_object_or_404(queryset, slug=slug)
+    return render(
+        request, 'football/porto_history.html',
+        {
+           'ball': ball,
+        },
+   )
+

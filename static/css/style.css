@@ -63,6 +63,30 @@ body{
     background-attachment: fixed;
 }
 
+.history-background-bvb{
+    background: url('../images/bvb_bg.jpg') no-repeat center /cover;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-inter-milan{
+    background: url('../images/inter-bg.jpg');
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-lpool{
+    background: url('../images/pool-bg.jpg');
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.history-background-porto{
+    background: url('../images/fc-porto-bg.jpg');
+    height: 100%;
+    background-attachment: fixed;
+}
+
 .font-caveat{
     font-family: caveat, Arial;
     font-weight: 700 ;
