@@ -115,17 +115,19 @@ body{
     color: red;
 }
 
-.add-bottom-padding{
-    background-color: rgb(211, 210, 210, 0.0);
-    padding-bottom: 4rem;
-    margin-top: 3em;
+.add-bottom-padding {
+    width: 50%;
+    margin: 1em auto;
     padding: 3em;
 }
 
 .color-white{
     margin-top: 18px;
-    color: #fff;
     padding: 13px;
+}
+
+.white-color-text{
+    color: #fff;
 }
 
 .text-color{
@@ -239,6 +241,12 @@ body{
         line-height: 1.2; /* Adjust line height for better readability */
         max-width: 100%; /* Ensure the name does not exceed the container width */
         font-size: 15px; /* Adjust font size if necessary */
+    }
+
+    .add-bottom-padding {
+        width: 100%; /* Full width on small screens */
+        margin:  auto; /* Center the element */
+        padding: 1em; /* Reduced padding for smaller screens */
     }
 
 }
