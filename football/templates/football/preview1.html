@@ -26,7 +26,25 @@
     <div class="card-footer text-muted">
     </div>
     <h6 class="card-text marg-top"> {{ ball.content | safe }} </h6>
-    <p class="left margin-top"><em>Created on:</em> {{ ball.created_on }} </p>
+    <p class="left color-white"><em>Created on:</em> {{ ball.created_on }} </p>
   </div>
+
+  <div class="container text-center white-color-text bg-color">
+    <div class="row">
+      <div class="col-sm screen-size div-green-color">
+        0<br>
+        <span>Home</span>
+      </div>
+      <div class="col-sm screen-size div-blue-color">
+        0<br>
+        <span>Draw</span>
+      </div>
+      <div class="col-sm screen-size div-red-color">
+        0<br>
+        <span>Away</span>
+      </div>
+    </div>
+  </div>
+  
 
 {% endblock content %}
