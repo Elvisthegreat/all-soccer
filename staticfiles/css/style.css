@@ -1,6 +1,6 @@
 body{
     min-height: 100vh;
-    background: url('../images/image-poster.jpg')no-repeat center /cover;
+    background: url('../images/c-league-bg.jpg')no-repeat center /cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
@@ -122,7 +122,6 @@ body{
 }
 
 .color-white{
-    margin-top: 18px;
     padding: 13px;
 }
 
@@ -185,10 +184,73 @@ body{
     width: 125px;
 }
 
+.smallest-logo{
+    width: 25px;
+    height: 25px;
+}
+
 #main-content{
     min-height: 100vh;
     flex: 1 0 auto;
 }
+
+.bg-color{
+    background-color: rgb(36, 36, 36, 0.6);
+    font-size: large;
+    padding: 2em;
+    height: 400px;
+    letter-spacing: 2px;
+    margin-top: 12px;
+}
+
+.screen-size{
+    margin-top: 2em;
+}
+
+/*style for Home, Draw and Away vote block*/
+
+.div-green-color {
+    background-color: green;
+    height: 90px;
+    padding-top: 1.5em;
+    margin: auto 15px;
+    max-width: 150px;
+}
+
+.div-blue-color{
+    background-color: blue;
+    height: 90px;
+    padding-top: 1.5em;
+    margin: auto 15px;
+    max-width: 150px;
+}
+
+
+.div-red-color{
+    background-color: red;
+    height: 90px;
+    padding-top: 1.5em;
+    margin: auto 15px;
+    max-width: 150px;
+}
+
+  .div-green-color span,
+  .div-blue-color span,
+  .div-red-color span {
+    display: block; /* Makes the span take the full width of the container */
+    margin-top: 40px; /* Adds space between the '0' and the text */
+  }
+
+.custom-width {
+    flex: 0 0 auto;
+    width: 100px; /* Set your desired width here */
+}
+
+#set-width{
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 .styled-padding{
     padding: 1em;
@@ -232,6 +294,11 @@ body{
         width: 79px;
     }
 
+    .smallest-logo{
+        width: 20px;
+        height: 20px;
+    }
+
     .marg-top {
         margin-top: 1em; /* Add some space above each h3 */
     }
@@ -247,6 +314,18 @@ body{
         width: 100%; /* Full width on small screens */
         margin:  auto; /* Center the element */
         padding: 1em; /* Reduced padding for smaller screens */
+    }
+
+    .screen-size{
+        display: inline-block;
+        width: 33%;
+        font-size: 16px;
+    }
+
+    .div-red-color, .div-green-color, .div-blue-color{
+        max-width: 70px;
+        height: 80px;
+        margin-right: 5.5px;
     }
 
 }
