@@ -184,6 +184,11 @@ body{
     width: 125px;
 }
 
+.smallest-logo{
+    width: 25px;
+    height: 25px;
+}
+
 #main-content{
     min-height: 100vh;
     flex: 1 0 auto;
@@ -209,7 +214,7 @@ body{
     height: 90px;
     padding-top: 1.5em;
     margin: auto 15px;
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .div-blue-color{
@@ -217,7 +222,7 @@ body{
     height: 90px;
     padding-top: 1.5em;
     margin: auto 15px;
-    max-width: 100px;
+    max-width: 150px;
 }
 
 
@@ -226,7 +231,7 @@ body{
     height: 90px;
     padding-top: 1.5em;
     margin: auto 15px;
-    max-width: 100px;
+    max-width: 150px;
 }
 
   .div-green-color span,
@@ -287,6 +292,11 @@ body{
     .porto-png{
         height: 75px;
         width: 79px;
+    }
+
+    .smallest-logo{
+        width: 20px;
+        height: 20px;
     }
 
     .marg-top {
