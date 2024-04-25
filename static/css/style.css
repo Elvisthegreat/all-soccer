@@ -199,21 +199,52 @@ body{
 }
 
 .screen-size{
-    margin-top: 3em;
+    margin-top: 2em;
 }
 
 /*style for Home, Draw and Away vote block*/
-.div-green-color{
-    width: 50px;
-    height: 50px;
+
+.div-green-color {
     background-color: green;
+    height: 90px;
+    padding-top: 1.5em;
+    margin: auto 15px;
+    max-width: 100px;
 }
+
+.div-blue-color{
+    background-color: blue;
+    height: 90px;
+    padding-top: 1.5em;
+    margin: auto 15px;
+    max-width: 100px;
+}
+
+
+.div-red-color{
+    background-color: red;
+    height: 90px;
+    padding-top: 1.5em;
+    margin: auto 15px;
+    max-width: 100px;
+}
+
   .div-green-color span,
   .div-blue-color span,
   .div-red-color span {
     display: block; /* Makes the span take the full width of the container */
-    margin-top: 20px; /* Adds space between the '0' and the text */
+    margin-top: 40px; /* Adds space between the '0' and the text */
   }
+
+.custom-width {
+    flex: 0 0 auto;
+    width: 100px; /* Set your desired width here */
+}
+
+#set-width{
+    align-items: center;
+    justify-content: space-between;
+}
 
 
 .styled-padding{
@@ -279,6 +310,12 @@ body{
         display: inline-block;
         width: 33%;
         font-size: 16px;
+    }
+
+    .div-red-color, .div-green-color, .div-blue-color{
+        max-width: 70px;
+        height: 80px;
+        margin-right: 5.5px;
     }
 
 }
