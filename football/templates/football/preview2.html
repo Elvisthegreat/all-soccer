@@ -29,4 +29,26 @@
     <p class="left margin-top"><em>Created on:</em> {{ ball.created_on }} </p>
   </div>
 
+  <div class="container text-center white-color-text bg-color">
+    <div class="row" id="set-width">
+      <button class="col-sm screen-size div-green-color white-color-text" id="div-green-color">
+        0 %<br>
+       <span>Home</span>
+      </button>
+      <button class="col-sm screen-size div-blue-color white-color-text" id="div-blue-color">
+        0 %<br>
+        <span>Draw</span>
+      </button>
+      <button class="col-sm screen-size div-red-color white-color-text" id="div-red-color">
+        0 %<br>
+        <span>Away</span>
+      </button>
+    </div>
+  </div>
 {% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
+
+

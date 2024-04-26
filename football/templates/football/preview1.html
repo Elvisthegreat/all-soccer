@@ -31,20 +31,22 @@
 
   <div class="container text-center white-color-text bg-color">
     <div class="row" id="set-width">
-      <div class="col-sm screen-size div-green-color ">
+      <button class="col-sm screen-size div-green-color white-color-text" id="div-green-color">
         0 %<br>
-       <span><img class="size-image size-image-logo madrid7-png smallest-logo" src="{% static 'images/barcelonalogo.jpg' %}" alt="barca logo"> Home</span>
-      </div>
-      <div class="col-sm screen-size div-blue-color">
+       <span>Home</span>
+      </button>
+      <button class="col-sm screen-size div-blue-color white-color-text" id="div-blue-color">
         0 %<br>
         <span>Draw</span>
-      </div>
-      <div class="col-sm screen-size div-red-color ">
+      </button>
+      <button class="col-sm screen-size div-red-color white-color-text" id="div-red-color">
         0 %<br>
-        <span><img class="size-image size-image-logo madrid7-png smallest-logo" src="{% static 'images/psg.jpeg' %}" alt="barca logo"> Away</span>
-      </div>
+        <span>Away</span>
+      </button>
     </div>
   </div>
-  
-
 {% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

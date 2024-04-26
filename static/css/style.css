@@ -184,11 +184,6 @@ body{
     width: 125px;
 }
 
-.smallest-logo{
-    width: 25px;
-    height: 25px;
-}
-
 #main-content{
     min-height: 100vh;
     flex: 1 0 auto;
