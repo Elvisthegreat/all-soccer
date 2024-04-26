@@ -35,7 +35,7 @@ class Comment(models.Model):
     and :model:`blog.Post`.
     """
     ball = models.ForeignKey(
-        ball, on_delete=models.CASCADE, related_name="comments"
+        Football, on_delete=models.CASCADE, related_name="comments"
     )
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="commenter"

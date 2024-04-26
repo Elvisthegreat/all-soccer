@@ -17,7 +17,7 @@ def preview1(request, slug):
     ball = get_object_or_404(queryset, slug=slug)
     comments = ball.comments.all().order_by("-created_on")
 
-    comment_form = CommentForm()
+
 
     return render(
         request,
@@ -26,7 +26,6 @@ def preview1(request, slug):
         {
             'ball': ball,
             "comments": comments,
-            "comment_form": = commentForm,
         },
     )
 
