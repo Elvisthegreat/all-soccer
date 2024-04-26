@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Football
+from .models import Football, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
@@ -7,5 +7,8 @@ from django_summernote.admin import SummernoteModelAdmin
 class FootballAdmin(SummernoteModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
     summernote_fields = ('content',)
+
+# Register your models here.
+admin.site.register(Comment)
 
 
