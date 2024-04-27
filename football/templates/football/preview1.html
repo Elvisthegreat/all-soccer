@@ -45,6 +45,25 @@
         <span>Away</span>
       </button>
     </div>
+
+    <!--Comment section-->
+    <div class="card text-center bg-color white-color-text push-down">
+      <h2>
+        Comments:
+      </h2>
+      <div class="card-body">
+        <h4 class="card-title push">Leave your opinions</h4>
+            {% for comment in comments %}
+        <p class="card-text"> {{comment.author}} 
+          <span> {{comment.created_on}} </span>
+        </p>
+        <div id="comment{{ comment.id }}">
+          {{ comment.body | linebreaks }}
+      </div>
+            {% endfor %}
+      </div>
+    </div>
+
   </div>
 {% endblock content %}
 
