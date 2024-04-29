@@ -110,6 +110,26 @@ body{
     font-size:25px ;
 }
 
+/*code from Django walkthrough */
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: uppercase;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: #188181;
+}
+
+ /*Mine*/
 #slash{
     font-weight: 300;
     color: red;
@@ -125,6 +145,7 @@ body{
     padding: 13px;
     margin-top: 3em;
 }
+
 
 .white-color-text{
     color: #fff;
@@ -207,25 +228,8 @@ body{
     margin-bottom: 45px;
 }
 
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-}
-
 .screen-size{
     margin-top: 2em;
-}
-
-.post-link {
-    text-decoration: none;
-    color: rgb(44, 53, 32);
 }
 
 /*style for Home, Draw and Away vote block*/
