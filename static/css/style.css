@@ -5,7 +5,6 @@ body{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.7);
-    
     font-family: lora, Arial, Helvetica, sans-serif;
 }
 /*Previews sections background image*/
@@ -110,26 +109,6 @@ body{
     font-size:25px ;
 }
 
-/*code from Django walkthrough */
-.author {
-    color: white;
-    margin: 4px;
-    text-transform: uppercase;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-flash {
-    position: absolute;
-    bottom: 5%;
-    min-width: 30%;
-    left: -2px;
-    background-color: #188181;
-}
-
- /*Mine*/
 #slash{
     font-weight: 300;
     color: red;
@@ -138,11 +117,14 @@ body{
 .add-bottom-padding {
     width: 50%;
     margin: 1em auto;
-    padding: 3em;
+    padding: 2em;
 }
 
 .color-white{
     padding: 13px;
+}
+
+.home-margin{
     margin-top: 3em;
 }
 
@@ -284,6 +266,56 @@ body{
 .left{
     text-align: right;
 }
+
+
+/*Official styling*/
+
+.card-header{
+    margin: 20px 0 28px 0;
+    
+}
+
+.transparent-bg{
+    background-color: rgb(36, 36, 36, 0.6);
+    font-size: large;
+    padding: 2em;
+    height: auto;
+    letter-spacing: 1px;
+}
+
+.transparent-bg {
+    background-color: rgb(36, 36, 36, 0.6);
+}
+
+
+.post-link{
+    text-decoration: none;
+}
+.post-link:hover,
+.page-link {
+    color:  rgb(131, 177, 61);
+    text-decoration: none;
+}
+
+/*code from Django walkthrough */
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: capitalize;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: rgb(36, 36, 36, 0.6);
+}
+
 
 /*Media query*/
 
