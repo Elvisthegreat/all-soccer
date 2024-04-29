@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
@@ -13,8 +14,9 @@ class Official(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="official_football" 
     )
-    created_on = models.DateTimeField(auto_now_add=True)
+    featured_image = CloudinaryField('image', default='placeholder')
     content = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
     excerpt = models.TextField(blank=True)
 
     class Meta:
