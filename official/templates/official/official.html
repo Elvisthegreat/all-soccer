@@ -24,9 +24,9 @@
                             <!--If "placeholder" is there, then the default.jpg file in our static folder
                                  should be displayed. Otherwise, the user-generated image stored on Cloudinary is shown.-->
                             {% if "placeholder" in officials.featured_image.url %} <!--start for placeholder-->
-                            <img class="card-img-top" src="{% static 'images/ball-image.png' %}" alt="placeholder image">
+                            <img class="card-img-top image-height" src="{% static 'images/ball-image.png' %}" alt="placeholder image">
                             {% else %}
-                            <img class="card-img-top" src=" {{ officials.featured_image.url }}" >
+                            <img class="card-img-top image-height" src=" {{ officials.featured_image.url }}" alt="{{ officials.title }}">
                             {% endif %} <!--End for placeholder-->
                             <div class="image-flash">
                                 <p class="author">Author: {{ officials.author }}</p>

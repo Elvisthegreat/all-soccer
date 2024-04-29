@@ -284,7 +284,7 @@ body{
 }
 
 .transparent-bg {
-    background-color: rgb(36, 36, 36, 0.6);
+    background-color: rgb(20, 26, 11);
 }
 
 
@@ -296,6 +296,15 @@ body{
     color:  rgb(131, 177, 61);
     text-decoration: none;
 }
+
+.image-container .image-height {
+    max-width: 250px;
+    height: auto;
+    max-height: 250px;
+    display: flex;
+    justify-content: center;
+}
+
 
 /*code from Django walkthrough */
 .author {
@@ -313,7 +322,7 @@ body{
     bottom: 5%;
     min-width: 30%;
     left: -2px;
-    background-color: rgb(36, 36, 36, 0.6);
+    background-color: green;
 }
 
 
