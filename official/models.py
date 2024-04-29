@@ -23,3 +23,17 @@ class Official(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+class Comment(models.Model):
+    """
+    Stores a single comment entry related to :model:`auth.User`
+    and :model:`blog.Post`.
+    """
+    officials = models.ForeignKey(
+        Official, on_delete=models.CASCADE, related_name="comments"
+    )
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter"
+    )
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)

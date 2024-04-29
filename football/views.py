@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from .models import Football
-from .forms import CommentForm
 
 # Create your views here.
 
@@ -9,13 +8,11 @@ from .forms import CommentForm
 class FootballList(generic.ListView):
     queryset = Football.objects.all().order_by("-created_on")
     template_name = "football/index.html"
-    paginate_by = 6
 
 
 def preview1(request, slug):
     queryset = Football.objects.all()
     ball = get_object_or_404(queryset, slug=slug)
-    comments = ball.comments.all().order_by("-created_on")
 
 
 
@@ -25,7 +22,6 @@ def preview1(request, slug):
 
         {
             'ball': ball,
-            "comments": comments,
         },
     )
 

@@ -12,16 +12,17 @@ class OfficialList(generic.ListView):
 
 
 
-def official_news(request, slug):
-    queryset = Official.objects.all()
-    officials = get_object_or_404(queryset, slug=slug)
+# def official_news(request, slug):
+#     queryset = Official.objects.all()
+#     officials = get_object_or_404(queryset, slug=slug)
 
-    return render(
-        request,
-        "official/official_news.html",
+#     return render(
+#         request,
+#         "official/official_news.html",
 
-        {
-            'officials': officials,
-        },
-    )
+#         {
+#             'officials': officials,
+#             'comments': comments,
+#         },
+#     )
 

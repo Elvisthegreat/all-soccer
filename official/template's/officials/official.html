@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- index.html content starts here -->
+{% block content %}
+
+<div class="card text-center">
+    <div class="card-header">
+      Official News
+    </div>
+    
+    <!-- Officials Entries Column -->
+    <div class="col-12 mt-3 left">
+        <div class="row">
+            {% for officials in official_list %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="image-container">
+                            <!--Cloudinary-->
+                            <!--If "placeholder" is there, then the default.jpg file in our static folder
+                                 should be displayed. Otherwise, the user-generated image stored on Cloudinary is shown.-->
+                            {% if "placeholder" in post.featured_image.url %} <!--start for placeholder-->
+                            <img class="card-img-top" src="{% static 'images/nobody.jpg' %}" alt="placeholder image">
+                            {% else %}
+                            <img class="card-img-top" src=" {{ officials.featured_image.url }}" alt="{{ post.title }}">
+                            {% endif %} <!--End for placeholder-->
+                            <div class="image-flash">
+                                <p class="author">Author: {{ officials.author }}</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'official_news' officials.slug %}" class="post-link"> <!-- for the slug title name to display in url browser with the post_detail when a single post is click on-->
+                            <h2 class="card-title">{{ officials.title }}</h2>
+                            <p class="card-text">{{ officials.excerpt }}</p>
+                        </a>
+
+                        <hr />
+                        <p class="card-text text-muted h6">{{ officials.created_on}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %} <!--checks to see how many times our for loop has run, divisible by three-->
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+      
+    </div>
+  </div>
+<!-- index.html content ends here -->
+{% endblock %}
