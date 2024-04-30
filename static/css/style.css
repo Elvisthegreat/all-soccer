@@ -250,7 +250,7 @@ body{
 
 .custom-width {
     flex: 0 0 auto;
-    width: 100px; /* Set your desired width here */
+    width: 100px;
 }
 
 #set-width{
@@ -284,7 +284,12 @@ body{
 }
 
 .transparent-bg {
-    background-color: rgb(20, 26, 11);
+    background: url('../images/c-league-bg.jpg');
+}
+
+.transparent-bg-ofn{
+    background-color: rgb(36, 36, 36, 0.6);
+    text-align: center;
 }
 
 
@@ -293,18 +298,33 @@ body{
 }
 .post-link:hover,
 .page-link {
-    color:  rgb(131, 177, 61);
+    color:  blue;
     text-decoration: none;
 }
 
 .image-container .image-height {
-    max-width: 250px;
-    height: auto;
-    max-height: 250px;
-    display: flex;
-    justify-content: center;
+    width: 100%; /* This will make the image take the full width of its container */
+    height: auto; /* This will maintain the aspect ratio of the image */
+    display: block; /* Changed from flex to block */
+    margin: 0 auto; /* This will center the image if it's not as tall as the container */
 }
 
+/*Official_news.html section styling*/
+
+.reduce-image-width{
+    height: 700px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.stack-top{
+    margin-top: 1.8em;
+}
+
+.small-stack{
+    margin-top: 20px;
+}
 
 /*code from Django walkthrough */
 .author {
@@ -392,6 +412,12 @@ body{
         max-width: 70px;
         height: 80px;
         margin-right: 5.5px;
+    }
+
+    .reduce-image-width{
+        height: 300px;
+        width: 97%;
+        padding: 7px;
     }
 
 }

@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
-from .models import Official
+from .models import Official, Comment
 
 # Create your views here.
 
@@ -8,7 +8,7 @@ from .models import Official
 class OfficialList(generic.ListView):
     queryset = Official.objects.all().order_by("-created_on")
     template_name = "official/official.html"
-    paginate_by = 6
+    paginate_by = None
 
 
 
@@ -22,7 +22,6 @@ def official_news(request, slug):
 
         {
             'officials': officials,
-            'comments': comments,
         },
     )
 

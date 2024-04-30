@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+  <div class="card transparent-bg-ofn white-color-text">
+    <div class="card-body">
+      <h1 class="card-title stack-top">OFFICIAL: {{ officials.title }}</h1>
+      <h5 class="card-text small-stack"><em> {{ officials.author }} / {{ officials.created_on }} </em> </h5>
+      <p class="card-text"></p>
+    </div>
+    {% if "placeholder" in officials.featured_image.url %} <!--start for placeholder-->
+        <img class="reduce-image-width" src="{% static 'images/ball-image.png' %}" alt="Placeholder">
+    {% else %}
+        <img class="card-img-top image-height reduce-image-width" src=" {{ officials.featured_image.url }}" alt="{{ officials.title }}">
+        {% endif %} <!--End for placeholder-->
+  </div>
+{% endblock content %}
+
+{% block script %}
+<script src="{% static 'js/comments.js' %}"></script>
+{% endblock %}
