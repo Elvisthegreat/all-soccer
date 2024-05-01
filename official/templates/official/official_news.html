@@ -39,7 +39,6 @@
         Comments:
       </h2>
       <div class="card-body">
-        <h4 class="card-title push">Leave your opinions</h4>
             {% for comment in comments %}
         <p class="card-text"> {{comment.author}} 
           <span> {{comment.created_on}} </span>
@@ -62,8 +61,9 @@
       <div class="card-body">
         {% if user.is_authenticated %}
         <h3 class="push-down-little">Leave a comment:</h3>
-        <form>
+        <form d="commentForm" method="post">
           <div class="col-auto">
+           
             <button type="submit" class="btn btn-primary mb-2">Submit</button>
           </div>
       </form>

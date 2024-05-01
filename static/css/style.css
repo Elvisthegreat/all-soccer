@@ -362,6 +362,18 @@ body{
     margin-top: 20px;
 }
 
+/*Django allauth*/
+.green{
+    background-color: green;
+    color: blue;
+}
+
+.transparent-bg-ofn-login-signup{
+    background-color: rgb(36, 36, 36, 0.6);
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
 /*code from Django walkthrough */
 .author {
     color: white;
