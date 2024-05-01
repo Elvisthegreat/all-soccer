@@ -5,7 +5,6 @@ body{
     display: flex;
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.7);
-    
     font-family: lora, Arial, Helvetica, sans-serif;
 }
 /*Previews sections background image*/
@@ -118,12 +117,17 @@ body{
 .add-bottom-padding {
     width: 50%;
     margin: 1em auto;
-    padding: 3em;
+    padding: 2em;
 }
 
 .color-white{
     padding: 13px;
 }
+
+.home-margin{
+    margin-top: 3em;
+}
+
 
 .white-color-text{
     color: #fff;
@@ -193,9 +197,17 @@ body{
     background-color: rgb(36, 36, 36, 0.6);
     font-size: large;
     padding: 2em;
-    height: 400px;
+    height: auto;
     letter-spacing: 2px;
     margin-top: 12px;
+}
+
+.push-down{
+    margin-top: 80px;
+}
+
+.push{
+    margin-bottom: 45px;
 }
 
 .screen-size{
@@ -238,7 +250,7 @@ body{
 
 .custom-width {
     flex: 0 0 auto;
-    width: 100px; /* Set your desired width here */
+    width: 100px;
 }
 
 #set-width{
@@ -254,6 +266,121 @@ body{
 .left{
     text-align: right;
 }
+
+.right{
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+
+/*Official styling*/
+
+.card-header{
+    margin: 20px 0 28px 0;
+    
+}
+
+.transparent-bg{
+    background-color: rgb(36, 36, 36, 0.6);
+    font-size: large;
+    padding: 2em;
+    height: auto;
+    letter-spacing: 1px;
+}
+
+.transparent-bg {
+    background: url('../images/c-league-bg.jpg');
+}
+
+.transparent-bg-ofn{
+    background-color: rgb(36, 36, 36, 0.6);
+    text-align: center;
+    height: auto;
+}
+
+
+.post-link{
+    text-decoration: none;
+}
+.post-link:hover,
+.page-link {
+    color:  blue;
+    text-decoration: none;
+}
+
+.image-container .image-height {
+    width: 100%; /* This will make the image take the full width of its container */
+    height: auto; /* This will maintain the aspect ratio of the image */
+    display: block; /* Changed from flex to block */
+    margin: 0 auto; /* This will center the image if it's not as tall as the container */
+}
+
+/*Comment styling*/
+.bg-display-create{
+    background-color: rgb(36, 36, 36, 0.6);
+    margin-top: 2em;
+}
+
+
+.container {
+    text-align: center; /* This centers the inline-block elements */
+}
+
+.one-third-column, .two-third-column {
+    display: inline-block;
+    vertical-align: top; /* This aligns the tops of the elements */
+    margin-right: -4px; /* This helps fix spacing issues caused by inline-block */
+}
+
+.one-third-column {
+    width: 33%;
+}
+
+.two-third-column {
+    width: 66%;
+}
+
+.push-down-little{
+    margin-top: 60px;
+}
+
+/*Official_news.html section styling*/
+
+.reduce-image-width{
+    height: 700px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 3rem;
+}
+
+.stack-top{
+    margin-top: 1.8em;
+}
+
+.small-stack{
+    margin-top: 20px;
+}
+
+/*code from Django walkthrough */
+.author {
+    color: white;
+    margin: 4px;
+    text-transform: capitalize;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-flash {
+    position: absolute;
+    bottom: 5%;
+    min-width: 30%;
+    left: -2px;
+    background-color: green;
+}
+
 
 /*Media query*/
 
@@ -321,6 +448,18 @@ body{
         max-width: 70px;
         height: 80px;
         margin-right: 5.5px;
+    }
+
+    .reduce-image-width{
+        height: 300px;
+        width: 97%;
+        padding: 7px;
+    }
+
+    .one-third-column, .two-third-column {
+        display: block; /* Stack the columns vertically */
+        width: 100%; /* Each column takes full width */
+        margin-right: 0; /* Reset the margin */
     }
 
 }
