@@ -267,6 +267,12 @@ body{
     text-align: right;
 }
 
+.right{
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
 
 /*Official styling*/
 
@@ -290,6 +296,7 @@ body{
 .transparent-bg-ofn{
     background-color: rgb(36, 36, 36, 0.6);
     text-align: center;
+    height: auto;
 }
 
 
@@ -307,6 +314,35 @@ body{
     height: auto; /* This will maintain the aspect ratio of the image */
     display: block; /* Changed from flex to block */
     margin: 0 auto; /* This will center the image if it's not as tall as the container */
+}
+
+/*Comment styling*/
+.bg-display-create{
+    background-color: rgb(36, 36, 36, 0.6);
+    margin-top: 2em;
+}
+
+
+.container {
+    text-align: center; /* This centers the inline-block elements */
+}
+
+.one-third-column, .two-third-column {
+    display: inline-block;
+    vertical-align: top; /* This aligns the tops of the elements */
+    margin-right: -4px; /* This helps fix spacing issues caused by inline-block */
+}
+
+.one-third-column {
+    width: 33%;
+}
+
+.two-third-column {
+    width: 66%;
+}
+
+.push-down-little{
+    margin-top: 60px;
 }
 
 /*Official_news.html section styling*/
@@ -418,6 +454,12 @@ body{
         height: 300px;
         width: 97%;
         padding: 7px;
+    }
+
+    .one-third-column, .two-third-column {
+        display: block; /* Stack the columns vertically */
+        width: 100%; /* Each column takes full width */
+        margin-right: 0; /* Reset the margin */
     }
 
 }
