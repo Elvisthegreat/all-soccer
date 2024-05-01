@@ -320,6 +320,8 @@ body{
 .bg-display-create{
     background-color: rgb(36, 36, 36, 0.6);
     margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 
@@ -373,6 +375,16 @@ body{
     padding-top: 2em;
     padding-bottom: 2em;
 }
+
+/*comment_form | crispy*/
+/* Override Crispy Forms input styles */
+.form-control {
+    background-color: transparent; /* Make the background transparent */
+    color: #fff; /* Set the text color to white or any color that suits your design */
+    border: 1px solid #fff; /* Optional: set the border color */
+    padding: 1em;
+}
+
 
 /*code from Django walkthrough */
 .author {
@@ -472,6 +484,15 @@ body{
         display: block; /* Stack the columns vertically */
         width: 100%; /* Each column takes full width */
         margin-right: 0; /* Reset the margin */
+    }
+
+    /* Reduce the height of input fields */
+    .form-control {
+        height: 80px !important; /* Force the browser to use this height */
+        width: 100%; /* Adjust the width as needed */
+        padding: 0; /* Remove padding */
+     /* Remove borders */
+        box-sizing: border-box; /* Include padding and borders in the height if any */
     }
 
 }

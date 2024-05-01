@@ -33,8 +33,27 @@
     </div>
 
     <div class="container bg-display-create">
-         <!-- Display Comments-->
-    <div class="text-center white-color-text one-third-column push-down-little" style="padding: 25px;">
+    
+    <!--Creating new comment section-->
+    <div class="text-center white-color-text two-third-column">
+      <div class="card-body">
+        {% if user.is_authenticated %}
+        <h3 class="push-down-little">Leave a comment:</h3>
+        <form d="commentForm" method="post">
+          {{ comment_form | crispy }}
+            {% csrf_token %}
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+          </div>
+      </form>
+        {% else %}
+        <p>Log in to leave a comment</p>
+        {% endif %}
+    </div>
+    </div>
+
+     <!-- Display Comments-->
+     <div class="text-center white-color-text one-third-column push-down-little" style="padding: 25px;">
       <h2>
         Comments:
       </h2>
@@ -54,23 +73,6 @@
           
           {% endfor %} <!--end forloop-->
       </div>
-    </div>
-
-    <!--Creating new comment section-->
-    <div class="text-center white-color-text two-third-column">
-      <div class="card-body">
-        {% if user.is_authenticated %}
-        <h3 class="push-down-little">Leave a comment:</h3>
-        <form d="commentForm" method="post">
-          <div class="col-auto">
-           
-            <button type="submit" class="btn btn-primary mb-2">Submit</button>
-          </div>
-      </form>
-        {% else %}
-        <p>Log in to leave a comment</p>
-        {% endif %}
-    </div>
     </div>
 
   </div>

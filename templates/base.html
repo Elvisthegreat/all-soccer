@@ -73,24 +73,24 @@
                     href="{% url 'account_login' %}">Login</a>
             </li>
             {% endif %}
-
-
         </ul>
-          </ul>
+    
         </div>
+
+           <!--For user when logged in-->
+           <div style="text-align: right;">
+            {% if user.is_authenticated %}
+            <p class="text-end m-3 white-color-text">You are logged in as {{ user }}</p>
+            
+            {% else %}
+            <p class="text-end m-3 white-color-text">You are not logged in</p>
+    
+            {% endif %}
+            </div>
       </div>
       </nav>
 
       <main class="flex-shrink-0 main-bg" id="main-content">
-          
-        <!--For user when logged in-->
-        {% if user.is_authenticated %}
-        <p class="text-end m-3 white-color-text">You are logged in as {{ user }}</p>
-        
-        {% else %}
-        <p class="text-end m-3 white-color-text">You are not logged in</p>
-
-        {% endif %}
 
         {% block content %}
         <!-- Content Goes here -->
