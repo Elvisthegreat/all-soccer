@@ -385,6 +385,11 @@ body{
     padding: 1em;
 }
 
+.red-d-button{
+    background-color: green;
+    color: red;
+}
+
 
 /*code from Django walkthrough */
 .author {
