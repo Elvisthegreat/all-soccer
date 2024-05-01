@@ -66,10 +66,18 @@
           {{ comment.body | linebreaks }}
       </div>
            <!--Edit and Delete buttons and visible only when users are logged-in-->
-      {% if user.is_authenticated and comment.author == user %}
-          <button class="btn btn-delete" data-comment_id="{{ comment.id }}">Delete</button>
-          <button class="btn btn-edit" data-comment_id="{{ comment.id }}">Edit</button>
-     {% endif %}
+           {% if user.is_authenticated and comment.author == user %}
+           <div class="dropdown">
+             <button class="btn btn-secondary dropdown-toggle" type="button" id="commentActions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               ...
+             </button>
+             <div class="dropdown-menu" aria-labelledby="commentActions">
+               <a class="dropdown-item" href="#" data-comment_id="{{ comment.id }}">Edit</a>
+               <a class="dropdown-item" href="#" data-comment_id="{{ comment.id }}">Delete</a>
+             </div>
+           </div>
+         {% endif %}
+         
           
           {% endfor %} <!--end forloop-->
       </div>
