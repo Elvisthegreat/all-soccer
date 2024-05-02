@@ -30,10 +30,8 @@ editButtons.forEach(button => {
 
 // Delete section
 
-const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteConfirm = document.getElementById('deleteConfirm')
-
-// Assuming 'deleteModal' is the instance of your modal
+const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.querySelectorAll('.btn-delete');
 
 // Function to handle the delete button click event
@@ -51,10 +49,6 @@ function handleDeleteButtonClick(event) {
   // Show the modal
   deleteModal.show();
 }
-
-document.getElementById('deleteConfirm').addEventListener('click', function() {
-  document.getElementById('deleteModal').style.display = 'none';
-});
 
 // Add click event listeners to each delete button
 deleteButtons.forEach(button => {
