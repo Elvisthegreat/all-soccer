@@ -386,9 +386,11 @@ body{
     padding: 1em;
 }
 
-.red-d-button{
-    background-color: green;
-    color: red;
+/*Succes message*/
+.bg-message-color{
+    color: #fff;
+    font-size: 1rem;
+    
 }
 
 
