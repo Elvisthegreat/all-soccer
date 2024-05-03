@@ -28,6 +28,18 @@ editButtons.forEach(button => {
 });
 
 
+
+ // Using Enter keyboard button function to send message
+document.getElementsByClassName("answer-box")[0].addEventListener("keydown", function(event) {
+  if (event.key === "Enter"){
+    event.preventDefault(); // Prevent the default action (if any)
+    document.getElementById("commentForm").submit(); // Submit the form
+  }
+});
+
+
+
+
 // Delete section
 
 const deleteConfirm = document.getElementById('deleteConfirm')

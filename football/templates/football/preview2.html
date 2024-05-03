@@ -31,40 +31,21 @@
 
   <div class="container text-center white-color-text bg-color">
     <div class="row" id="set-width">
-      <button class="col-sm screen-size div-green-color white-color-text" id="div-green-colorReal">
+      <button class="col-sm screen-size div-green-color white-color-text" id="div-green-color">
         0 %<br>
        <span>Home</span>
       </button>
-      <button class="col-sm screen-size div-blue-color white-color-text" id="div-blue-colorDRM">
+      <button class="col-sm screen-size div-blue-color white-color-text" id="div-blue-color">
         0 %<br>
         <span>Draw</span>
       </button>
-      <button class="col-sm screen-size div-red-color white-color-text" id="div-red-colorMancity">
+      <button class="col-sm screen-size div-red-color white-color-text" id="div-red-color">
         0 %<br>
         <span>Away</span>
       </button>
     </div>
-
-    <!--Comment section-->
-    <div class="card text-center bg-color white-color-text push-down">
-      <h2>
-        Comments:
-      </h2>
-      <div class="card-body">
-        <h4 class="card-title push">Leave your opinions</h4>
-            {% for comment in comments %}
-        <p class="card-text"> {{comment.author}} 
-          <span> {{comment.created_on}} </span>
-        </p>
-        <div id="comment{{ comment.id }}">
-          {{ comment.body | linebreaks }}
-      </div>
-            {% endfor %}
-      </div>
-    </div>
-
   </div>
-  </div>
+
 {% endblock content %}
 
 {% block script %}

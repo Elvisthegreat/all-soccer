@@ -39,7 +39,7 @@
       <div class="card-body">
         {% if user.is_authenticated %}
         <h3 class="push-down-little">Leave a comment:</h3>
-        <form id="commentForm" method="post">
+        <form class="answer-box" id="commentForm" method="post">
           {{ comment_form | crispy }}
             {% csrf_token %}
           <div class="col-auto">

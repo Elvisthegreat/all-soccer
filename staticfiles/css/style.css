@@ -347,6 +347,7 @@ body{
     margin-top: 60px;
 }
 
+
 /*Official_news.html section styling*/
 
 .reduce-image-width{
@@ -383,6 +384,13 @@ body{
     color: #fff; /* Set the text color to white or any color that suits your design */
     border: 1px solid #fff; /* Optional: set the border color */
     padding: 1em;
+}
+
+/*Succes message*/
+.bg-message-color{
+    color: #fff;
+    font-size: 1rem;
+    
 }
 
 
@@ -476,7 +484,7 @@ body{
 
     .reduce-image-width{
         height: 300px;
-        width: 97%;
+        width: 100%;
         padding: 7px;
     }
 
