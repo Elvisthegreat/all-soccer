@@ -202,6 +202,13 @@ body{
     margin-top: 12px;
 }
 
+/*Carousel image height and width*/
+.image-height-width{
+    height: 450px;
+    width: 200px;
+    margin-bottom: 1em;
+}
+
 .push-down{
     margin-top: 80px;
 }
@@ -501,6 +508,17 @@ body{
         padding: 0; /* Remove padding */
      /* Remove borders */
         box-sizing: border-box; /* Include padding and borders in the height if any */
+    }
+
+    .push-down{
+        margin-top: 50px;
+    }
+
+    /*Carousel*/
+    .image-height-width{
+        height: 300px;
+        width: 100%;
+        padding: 7px;
     }
 
 }
