@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from django.contrib.messages import constants as messages # Add this line to for message green
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'football',
     'official',
+    'contact',
     'django_summernote',
     'cloudinary',
 ]

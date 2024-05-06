@@ -10,6 +10,11 @@ document.getElementById('div-green-colorBarca').innerHTML = `${countGreen} %<br>
 document.getElementById('div-blue-colorDBP').innerHTML = `${countBlue} %<br><span>Draw</span>`;
 document.getElementById('div-red-colorPsg').innerHTML = `${countRed} %<br><span>Away</span>`;
 
+document.getElementById('div-green-colorReal').innerHTML = `${countGreen} %<br><span>Home</span>`;
+document.getElementById('div-blue-colorDRM').innerHTML = `${countBlue} %<br><span>Draw</span>`;
+document.getElementById('div-red-colorMan').innerHTML = `${countRed} %<br><span>Away</span>`;
+
+
 // Define functions to increment each count, update the respective button content, and save to localStorage
 function incrementCountGreen() {
     countGreen += 1;
@@ -33,3 +38,5 @@ function incrementCountRed() {
 document.getElementById('div-green-colorBarca').addEventListener('click', incrementCountGreen);
 document.getElementById('div-blue-colorDBP').addEventListener('click', incrementCountBlue);
 document.getElementById('div-red-colorPsg').addEventListener('click', incrementCountRed);
+
+

@@ -2,6 +2,7 @@
 
 {% url 'home' as home_url %}
 {% url 'official' as official_url %}
+{% url 'contact' as contact_url %}
 <!--For user authentication-->
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -55,6 +56,11 @@
             <li class="nav-item active">
               <a class="nav-link text-white hover-color-bg {% if request.path == official_url %}active" aria-current="page{% endif %}"
               href="{% url 'official' %}">Official</a>
+            </li>
+
+            <li class="nav-item active">
+              <a class="nav-link text-white hover-color-bg {% if request.path == contact_url %}active" aria-current="page{% endif %}"
+              href="{% url 'contact' %}">Contact Us</a>
             </li>
             
             <!--Authentication-->
