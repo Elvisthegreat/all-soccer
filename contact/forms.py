@@ -4,7 +4,7 @@ from phonenumber_field.formfields import PhoneNumberField
 
 
 class ContactForm(forms.ModelForm):
-    phone = PhoneNumberField(widget=forms.TextInput(attrs={'placeholder': 'Enter phone number'}))
+    phone = PhoneNumberField(widget=forms.TextInput(attrs={'placeholder': '+3935190768745'}))
 
 
     class Meta:

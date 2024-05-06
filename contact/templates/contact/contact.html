@@ -3,4 +3,18 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% endblock %}
+<div class="card text-center bg-color white-color-text">
+    <div class="card-header">
+      <h2>Curious to know more about <span class="all">All </span> <span id="slash">/</span> <span class="all"> Football</span>?</h2>
+      <p>Why not fill in the form to reach out to our creators</p>
+    </div>
+    <div class="card-body">
+        <form method="post">
+            {{ contact_form | crispy }} <!--With this we displayed the name, email and messages forms in the Contact us section-->
+            {% csrf_token %}
+            <button type="submit" class="btn btn-success right green">Submit</button>
+        </form>
+    </div>
+  </div>
+
+{% endblock content %}
