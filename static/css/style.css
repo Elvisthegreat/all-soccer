@@ -395,16 +395,13 @@ body{
 
 /*Succes message*/
 .bg-success-message-color{
-    color: #fff;
-    font-size: 1rem;  
-}
-
-.success-message {
     background-color: #28a745; /* Green background */
     width: 50%;                /* Reduced width */
     margin: 0 auto;            /* Center the message */
     padding: 10px;
     border-radius: 5px;        /* Rounded corners */
+    color: #fff;
+    font-size: 1rem;  
 }
 
 
