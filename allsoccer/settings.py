@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-+rz*nm7xewrxyakv_fd@wc!3ta-r^r+b(9fxq-6+nt-)+9l(6+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEBUG' in os.environ
 
-ALLOWED_HOSTS = ['8000-elvisthegreat-allsoccer-6art7lhb9jj.ws-eu113.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-elvisthegreat-allsoccer-6art7lhb9jj.ws-eu111.gitpod.io','.herokuapp.com']
 
 
 # Application definition
@@ -116,7 +116,7 @@ DATABASES = {
 #     "https://*.herokuapp.com"
 # ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-elvisthegreat-allsoccer-6art7lhb9jj.ws-eu113.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-elvisthegreat-allsoccer-6art7lhb9jj.ws-eu111.gitpod.io']
 
 
 # Password validation

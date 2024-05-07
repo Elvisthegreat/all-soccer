@@ -20,7 +20,7 @@ def contact(request):
                 "Thanks for filling out the form, one of our creators will get back to you"
             )
 
-    coontact_form = ContactForm()
+    contact_form = ContactForm()
 
     return render(
         request,

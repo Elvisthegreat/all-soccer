@@ -396,8 +396,23 @@ body{
 /*Succes message*/
 .bg-success-message-color{
     color: #fff;
-    font-size: 1rem;
-    
+    font-size: 1rem;  
+}
+
+.success-message {
+    background-color: #28a745; /* Green background */
+    width: 50%;                /* Reduced width */
+    margin: 0 auto;            /* Center the message */
+    padding: 10px;
+    border-radius: 5px;        /* Rounded corners */
+}
+
+
+/*Crispy form*/
+.add-padding-crispy-form{
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -520,5 +535,23 @@ body{
         width: 100%;
         padding: 7px;
     }
+
+   .add-padding-crispy-form {
+       /* Reduce the padding to decrease height */
+       max-width: 100%;
+       /* Optional: Adjust the width to fit smaller screens */
+   }
+
+   .form-control {
+       padding: 0.5em;
+       /* Reduce the padding inside the form fields */
+   }
+
+   /* You can also adjust the font size of the form elements if necessary */
+   .form-control,
+   .btn {
+       font-size: 0.9em;
+       /* Reduce the font size to save space */
+   }
 
 }

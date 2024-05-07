@@ -117,7 +117,7 @@
   
 
         <!-- displaying Django success messages -->
-        <div class="container bg-success-message-color">
+        <div class="container bg-success-message-color success-message" id="success-message">
           <div class="row">
             <div class="col-md-8 offset-md-2">
               {% for message in messages %}
@@ -167,6 +167,20 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+       
+      <!--Remove success message after 5 seconds-->
+      <script>
+        // Wait for the DOM to load
+    document.addEventListener("DOMContentLoaded", function () {
+        // Get the success message element
+        const successMessage = document.getElementById("success-message");
+
+        // Hide the success message after 5 seconds
+        setTimeout(function () {
+            successMessage.style.display = "none";
+        }, 5000); // 5000 milliseconds = 5 seconds
+    });
+      </script>
 
       <!--To load our script.js file in static/js-->
 {% block script %}
