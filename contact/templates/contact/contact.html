@@ -9,7 +9,7 @@
       <p>Why not fill in the form to reach out to our creators</p>
     </div>
     <div class="card-body">
-        <form method="post">
+        <form method="post" class="add-padding-crispy-form">
             {{ contact_form | crispy }} <!--With this we displayed the name, email and messages forms in the Contact us section-->
             {% csrf_token %}
             <button type="submit" class="btn btn-success right green">Submit</button>

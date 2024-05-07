@@ -400,6 +400,13 @@ body{
     
 }
 
+/*Crispy form*/
+.add-padding-crispy-form{
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*code from Django walkthrough */
 .author {
@@ -520,5 +527,23 @@ body{
         width: 100%;
         padding: 7px;
     }
+
+   .add-padding-crispy-form {
+       /* Reduce the padding to decrease height */
+       max-width: 100%;
+       /* Optional: Adjust the width to fit smaller screens */
+   }
+
+   .form-control {
+       padding: 0.5em;
+       /* Reduce the padding inside the form fields */
+   }
+
+   /* You can also adjust the font size of the form elements if necessary */
+   .form-control,
+   .btn {
+       font-size: 0.9em;
+       /* Reduce the font size to save space */
+   }
 
 }
