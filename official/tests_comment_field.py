@@ -13,3 +13,8 @@ class TestCommentForm(TestCase):
     def test_comment_form_is_not_valid(self):
         comment_form = CommentForm({'body': ''})
         self.assertFalse(comment_form.is_valid(), msg='Comment form is valid')
+
+    
+        # Check if the specific error message is in the 'body' field errors
+        self.assertIn('This field is required.', comment_form.errors['body'],
+        msg='Error message not found in form errors')
