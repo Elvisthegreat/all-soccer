@@ -4,10 +4,6 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .models import Official, Comment
 from .forms import CommentForm
-# 3rd party
-from django.http import JsonResponse
-from django.views.decorators.http import require_POST
-from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -52,24 +48,6 @@ def official_news(request, slug):
             "comment_form": comment_form,
         },
     )
-
-
-# like comment
-@login_required
-@require_POST
-def like_comment(request):
-    comment_id = request.POST.get('id')
-    action = request.POST.get('action')
-    if comment_id and action:
-        try:
-            comment = Comment.objects.get(id=comment_id)
-            if action == 'like':
-                comment.likes += 1
-                comment.save()
-            return JsonResponse({'status':'ok'})
-        except Comment.DoesNotExist:
-            return JsonResponse({'status':'error'})
-    return JsonResponse({'status':'error'})
 
 
 def comment_edit(request, slug, comment_id):

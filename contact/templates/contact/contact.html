@@ -9,12 +9,19 @@
       <p>Why not fill out the form to reach out to our creators</p>
     </div>
     <div class="card-body">
+      {% if user.is_authenticated %}
         <form method="post" class="add-padding-crispy-form">
             {{ contact_form | crispy }} <!--With this we displayed the name, email and messages forms in the Contact us section-->
             {% csrf_token %}
             <button type="submit" class="btn btn-success right green">Submit</button>
         </form>
+        {% else %}
+        <p>Please login <a class="link" href="{{ login_url }}">log in</a> or sign up <a class="link" href="{{ signup_url }}">sign up</a></p>
+        {% endif %}
     </div>
+    </div>
+    
+    
   </div>
 
 {% endblock content %}
