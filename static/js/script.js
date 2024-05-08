@@ -1,5 +1,34 @@
 document.addEventListener('DOMContentLoaded', (event) => {
 
+  // JavaScript to handle clicking on the like button
+  $(document).ready(function() {
+    $('.btn-like').on('click', function(e) {
+        e.preventDefault();
+        var commentId = $(this).data('comment_id');
+        console.log('Button clicked, comment ID:', commentId); // Log when button is clicked
+        $.ajax({
+            url: '/like_comment/',
+            type: 'post',
+            data: {
+                id: commentId,
+                action: 'like',
+                csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val()
+            },
+            success: function(response) {
+                if (response.status == 'ok') {
+                    // Update the number of likes on the page
+                    var currentLikes = parseInt($(`#like-count-${commentId}`).text());
+                    $(`#like-count-${commentId}`).text(currentLikes + 1);
+                    console.log('Like count updated for comment ID:', commentId); // Log the like count update
+                }
+            }
+        });
+    });
+});
+
+
+
+
 // Edit section
 
 // Each edit button has a data attribute 'data-comment_id' with the comment's ID

@@ -65,6 +65,11 @@
         <div id="comment{{ comment.id }}">
           {{ comment.body | linebreaks }}
       </div>
+
+      <!-- Like button -->
+      <button class="btn-like" data-comment_id="{{ comment.id }}"><i style="color: green;" class="fas fa-thumbs-up"></i></button>
+      <span id="like-count-{{ comment.id }}">{{ comment.likes }}</span>
+      
            <!--Edit and Delete buttons and visible only when users are logged-in-->
            {% if user.is_authenticated and comment.author == user %}
           <div class="dropdown">
