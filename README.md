@@ -1,39 +1,44 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# All / Football
+![Screenshot (464)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/0d577137-22b0-4558-a0c4-168e286f40a2)
 
-Welcome,
+**Developer or page Creator: Elvis Blessing** |
+[View live website](https://all-soccer-864c11b0e6cc.herokuapp.com/)
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Table of Contents
+  - [About](#about)
+  - [Users Goal](#users-goal)
+  - [Site Owner Goal](#site-owner-goal)
+  - [Users Experience](#users-experience)
+  - [](#)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+### About 
+<strong>All / Football</strong> is a page about football, about soccer. A page were weekly game games are schedule e.g la Liga, Premier league or champions league, and created by football enthusiastic
 
-## Codeanywhere Reminders
+### Users Goal
+   - To read about team history
+   - To read about lastest news about football
+   - To Know about lastest officials in football
+   - To know about games to be played during the week
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+### Site Owner Goal
+   - To provide a way users can read about lastest football update
+   - To allow users to know about games to be played during the week
+   - To allow users to read about team greatest archievement
+   - To create something really dynamic, responsive and useable to any football enthusiastic
 
-`python3 -m http.server`
+## Users Experience
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+### Targeted Audience
+   - Users that are looking for an app were relevants and quick informations can be found
+   - Users who love to read about football news and leave comment
+   - Users that are looking for an app to join in the thread conversation of commenters
+   - Someone looking for weekly football news and game schedules
+   - Users who are looking for app to register to become a memember of a football app so they never miss official news
+   - Users that big supporters of club with history
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+### Users Requirement an Expectations
+   - App free from bugs
+   - Fully reponsive 
+   - Quickly find relevant informations
+   - Texts can be well readed
+   - provide what users expected according to the app name
