@@ -202,6 +202,14 @@ body{
     margin-top: 12px;
 }
 
+.bg-color-contact-us{
+    background-color: rgb(36, 36, 36, 0.6);
+    font-size: large;
+    padding: 2.2em;
+    height: auto;
+    letter-spacing: 2px;
+}
+
 /*Carousel image height and width*/
 .image-height-width{
     height: 450px;

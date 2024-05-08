@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 action: 'like',
                 csrfmiddlewaretoken: $('input[name="csrfmiddlewaretoken"]').val()
             },
+            cache: false, // Added to prevent caching
             success: function(response) {
                 if (response.status == 'ok') {
                     // Update the number of likes on the page
@@ -25,8 +26,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
-
-
 
 
 // Edit section
