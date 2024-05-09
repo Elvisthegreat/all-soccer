@@ -199,6 +199,10 @@ body{
     flex: 1 0 auto;
 }
 
+.increase-width-preview{
+    width: 100px;
+}
+
 .bg-color{
     background-color: rgb(36, 36, 36, 0.6);
     font-size: large;

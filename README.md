@@ -18,10 +18,20 @@
     - [Fonts](#fonts)
     - [Structure](#structure)
   - [Features](#features)
+  - [Social Media Links](#social-media-links)
+  - [Logos](#logos)
   - [Database](#database)
   - [Technologies Used](#technologies-used)
-  - [](#)
-  - [](#)
+  - [Validation](#validation)
+  - [Testng](#testing)
+  - [Manual Testing](#manual-testing)
+  -[Automated testing](#automated-testing)
+  -[Bugs](#bugs)
+  -[Fix](#fix)
+  -[Deployment to Heroku](#deployment-to-heroku)
+  -[Fork Repository](#fork-repository)
+  -[Clone Repository](#clone-repository)
+  -[Credit and Acknowledgements][#credit-and-acknowledgements]
 
 ### About 
 <strong>All / Football</strong> is a page about football, about soccer. A page were weekly game games are schedule e.g la Liga, Premier league or champions league, and created by football enthusiastic
@@ -157,6 +167,26 @@
       This section help a user to log back in in case they automatically log out
       ![Screenshot (478)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/d973a437-9c46-4ddb-a115-a5a6971fa393)
 
+   
+   * Footer
+      - Contains social media links and copyright
+      - displayed across all pages
+      
+     ![Screenshot (484)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/716e67ba-f344-4372-b34e-8e7c67a5bba8)
+
+### Social Media Links
+   - A logo and link is used for each social media displayed
+   - All links open in a new tab to ensure user is not directed away from the business
+   - Displayed on all pages
+      ![Screenshot (471)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/83b4c522-f800-4943-b439-fc29141e41eb)
+
+### Logos
+   - Custom logos for the each team
+      - Fully Responsive
+      - displayed on all pages
+      ![Screenshot (473)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/0b2abbc2-c754-4003-a036-173ade8eef1d)
+
+
 ## Database
    - Built with Python and the Django framework with a database of a Postgres for the deployed Heroku version(production)
 
@@ -223,12 +253,17 @@ The Contact Us model contains the following
 - [jQuery](https://jquery.com)
 - [Postgres](https://www.postgresql.org/)
 - [Summernote](https://summernote.org/)
-- Validation:
+
+## Validation:
   - [WC3 Validator](https://validator.w3.org/)
-     <details><summary> view validation HTML</summary></details>
+     <details><summary> view validation HTML</summary>
+     <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/74ad43a8-7d44-47e0-8bda-697105693893">
+     </details>
 
   - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
-     <details><summary>view validation CSS</summary></details>
+     <details><summary>view validation CSS</summary>
+     <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/bbc19031-35af-4387-8bbc-378edb3090e2">
+     </details>
 
   - [JShint](https://jshint.com/)
      <details><summary> view validation JShint</summary>
@@ -245,5 +280,63 @@ The Contact Us model contains the following
      <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/097dc4aa-a2e4-4047-a0f2-1655ab011150">
      </details>
 
+  - [Pycodestyle(PEP8)](https://pypi.org/project/pycodestyle/)
 
-       
+## Testing
+
+1. Manual testing
+2. Automated testing
+
+## Manual testing
+
+1. As a User I can navigate across the site so that I can move to each feature of the site easily
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click on the 'Home' link in the navigation bar | Homepage will load| Works as expected |
+| Click on the 'Register' link in the navigation bar | Sign up page will load| Works as expected |
+| Click on the 'Login' link in the navigation bar | Login page will load| Works as expected |
+| Click on the 'Contact Us' link in the navigation bar, fields are display| Works as expected |
+| Click on the 'Official' link in the navigation bar, official news are display| Works as expected |
+| Click on the 'Logout' link in the navigation bar, logout page is display| Works as expected |
+
+### Automated testing
+
+- Testing was done using the built in Django module, unittest.
+
+## Bugs
+   - Tested responsivness and found out logos wasn't responsive as expected
+   - Tested responsivness and found out footer wasn't stick to bottom page as expected
+   - Tested bootstrap temoplate and found out on smaller screen clicking on the hamburger icon doesn't open links
+
+## Fix 
+   - Responsiveness for logos are fixed
+   - Responsiveness for footer is fixed
+   - Hamburger icon is working as expected
+
+## Deployment to Heroku
+   This project has been deployed to heroku and work as expected
+
+### Fork Repository
+To fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Click on Fork button in upper right hand corner
+<hr>
+
+### Clone Repository
+You can clone the repository by following these steps:
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it 
+3. Select if you prefere to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7.Press Enter to create your local clone.
+
+
+# Credits and Acknowledgements
+
+* Special thanks to the following:
+- Tutor team for their hard work
+- My Mentor Mo Shami
+
