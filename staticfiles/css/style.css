@@ -86,6 +86,7 @@ body{
     background-attachment: fixed;
 }
 
+/*Navs fonts*/
 .font-caveat{
     font-family: caveat, Arial;
     font-weight: 700 ;
@@ -148,7 +149,12 @@ body{
     margin-right: 10px;
 }
 
-#size-psg-logo{
+.size-psg-logo{
+    height: 60px;
+    width: 100px;
+}
+
+#size-psg-logoo{
     height: 60px;
     width: 100px;
 }
@@ -456,13 +462,22 @@ body{
         width: 60px;
     }
 
-    #size-psg-logo{
+    #size-psg-logoo{
         height: 60px;
         width: 77px;
     }
     .madrid7-png{
         height: 78px;
         width: 60px;
+    }
+
+    .increase-width{
+        width: 77px;
+    }
+
+    .madrid-reduce-logo{
+        height: 55px;
+        width: 55px;
     }
 
     .porto-png{

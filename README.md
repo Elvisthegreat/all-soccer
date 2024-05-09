@@ -12,6 +12,16 @@
   - [Users Stories](#user-stories)
   - [Kanban](#kanban)
   - [Design](#design)
+    - [Design Idea](#design-idea)
+    - [Background design](#background-design)
+    - [Colors](#colors)
+    - [Fonts](#fonts)
+    - [Structure](#structure)
+  - [Features](#features)
+  - [Database](#database)
+  - [Technologies Used](#technologies-used)
+  - [](#)
+  - [](#)
 
 ### About 
 <strong>All / Football</strong> is a page about football, about soccer. A page were weekly game games are schedule e.g la Liga, Premier league or champions league, and created by football enthusiastic
@@ -75,4 +85,165 @@
 
 ## Design
 ### Design Idea
-   As a football enthusiastic i have always love to stick close to my beloved club Barcelona for lastes news update, and for that reason i downloaded an app called All football, which is really easy to use, relevant links and pages are find quickly
+   As a football enthusiastic i have always love to stick close to my beloved club Barcelona for lastest news update, and for that reason i downloaded an app called All football, which is really easy to use, relevant links and pages are find quickly
+   [Check it out](https://play.google.com/store/apps/details?id=com.allfootball.news&pcampaignid=web_share)
+
+### Background design
+   Since its all about football, i used football images for the background design to really make the page stand out between the name of the app and everything within the app [Check out repo for all images and logos used](https://github.com/Elvisthegreat/all-soccer/tree/main/static/images)
+
+### Colors
+   <details><summary>App name</summary>
+     <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/003d1fae-3464-4618-ae5b-0a34ee007649
+">
+     color: rgb(131, 177, 61);
+
+   - The red middle pip, color: red;
+   </details>
+   
+   <details><summary>Navs and footer</summary>
+     <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/36332f96-2a47-426f-9c25-2bed97d81bef
+">
+    
+   <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/80bd330f-fc3f-4c24-9e2a-da4bc506cb3e
+">
+      .bg-dark class color inherited from bootstrap
+   </details>
+
+   <details><summary>Transparent background</summary>
+   <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/368b02e0-2782-4a19-afc3-50295cc2d212
+">
+      background-color: rgb(36, 36, 36, 0.6);
+   </details>
+   <details><summary>Navs and social icon hover colors</summary>
+   <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/8637209d-b4f8-4199-a39c-1f79c338fc78
+"> 
+   <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/acc00736-8145-430e-9770-accb7fc289fc
+">
+      <hr>
+      background:  rgb(131, 177, 61);
+   </details>
+
+### Fonts
+   - Google selected fonts 'caveat' was for navigation 'Ariel' has fallback
+   - Fonts used for the body, font-family: lora, Arial, Helvetica, sans-serif;
+
+### Structure
+   The site was structured in a easy way which a user can easily familiar with, and the first (3)three things a user can easily find immediately once page is loaded are:
+   * Navigation
+      Navigation is the first part a user can easily find without scrolling the page, and this part consist of the links of each sections of the site e.g Home, Officials, Contact Us, Sign Up, Login and Log Out
+   * Body
+      This is the center of the page and the most important part of the website, because here is where most functions and work are display
+   * Footer
+      This part are is where copyright and social icons are located
+
+## Features
+   * Home <hr>
+      The first part a user see's when the page is loaded and this part consist of game schedule are to be played
+      ![Screenshot (473)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/1cb53357-90d2-45d0-98c9-5ba7f8485481)
+
+   * Official <hr>
+      This sections are where officials and lastest news are all published
+      ![Screenshot (474)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/84c5c56f-a269-4c66-95e0-d7cb8720a398)
+  
+   * Contact Us <hr>
+      If users are curious to know more about our page, this section allows anyone to fill out their details to reach out to any of our creators
+      ![Screenshot (475)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/a32dbce2-f8cd-486e-892e-6f0958d4b2c5)
+
+   * Sign Up <hr>
+      This section allow users to register to the site and become a member
+      ![Screenshot (477)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/15180192-f558-47e4-97af-12ee4293b29d)
+
+   * Login <hr>
+      This section help a user to log back in in case they automatically log out
+      ![Screenshot (478)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/d973a437-9c46-4ddb-a115-a5a6971fa393)
+
+## Database
+   - Built with Python and the Django framework with a database of a Postgres for the deployed Heroku version(production)
+
+##### Football Model
+The Home Model contains the following:
+   - title
+   - slug
+   - author (ForeignKey)
+   - content
+   - created_on
+   - status
+   - excerpt
+   - Meta: created_on
+
+##### Official Model
+The Official Model contains the following:
+   - title
+   - slug
+   - author (ForeignKey)
+   - featured_image
+   - content
+   - created_on
+   - excerpt
+
+##### Official/Comment Model
+The Comment Model contains the following:
+   - officials (ForeignKey)
+   - author (ForeignKey)
+   - body
+   - created_on
+   - Meta: created_on
+
+##### Contact Us Model
+The Contact Us model contains the following
+   name
+   email
+   phone
+   message
+   read
+
+## Technologies Used
+
+### Languages & Frameworks
+
+- HTML
+- CSS
+- Javascript
+- Python
+- Django
+
+
+### Libraries & Tools
+
+- [Am I Responsive](http://ami.responsivedesign.is/)
+- [Bootstrap v4 v5.2](https://getbootstrap.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [Favicon.io](https://favicon.io)
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/)
+- [Font Awesome](https://fontawesome.com/)
+- [Git](https://git-scm.com/)
+- [GitHub](https://github.com/)
+- [Google Fonts](https://fonts.google.com/)
+- [Heroku Platform](https://id.heroku.com/login)
+- [jQuery](https://jquery.com)
+- [Postgres](https://www.postgresql.org/)
+- [Summernote](https://summernote.org/)
+- Validation:
+  - [WC3 Validator](https://validator.w3.org/)
+     <details><summary> view validation HTML</summary></details>
+
+  - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
+     <details><summary>view validation CSS</summary></details>
+
+  - [JShint](https://jshint.com/)
+     <details><summary> view validation JShint</summary>
+      The bootstrap one undefined variable was from the blog post walkthrough i tried to work on it and remove the warning but it  seem impossible, because when it remove from the code that cause some unstyled problem in the deletion modal
+      <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/6766bf38-bdcf-4cd7-92da-830224eef646">
+
+     <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/74972ae1-c496-4e5d-b2eb-d44361307d6c">
+
+     <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/d6729061-9759-4bd1-be67-2d3b362f8f9a">
+     </details>
+
+  - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
+     <details><summary> view validation Lighthouse</summary>
+     <img src="https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/097dc4aa-a2e4-4047-a0f2-1655ab011150">
+     </details>
+
+
+       
