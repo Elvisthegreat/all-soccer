@@ -30,9 +30,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-+rz*nm7xewrxyakv_fd@wc!3ta-r^r+b(9fxq-6+nt-)+9l(6+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
+DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-elvisthegreat-allsoccer-6art7lhb9jj.ws-eu111.gitpod.io','.herokuapp.com']
+ALLOWED_HOSTS = ['8000-elvisthegreat-allsoccer-ql4lfxff7u5.ws.codeinstitute-ide.net','.herokuapp.com']
 
 
 # Application definition
@@ -98,16 +98,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'allsoccer.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
@@ -115,12 +105,8 @@ DATABASES = {
 if 'test' in sys.argv:
     DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3' # for testing our code
 
-# CSRF_TRUSTED_ORIGINS = [
-#     "https://*.codeanyapp.com",
-#     "https://*.herokuapp.com"
-# ]
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-elvisthegreat-allsoccer-6art7lhb9jj.ws-eu111.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-elvisthegreat-allsoccer-ql4lfxff7u5.ws.codeinstitute-ide.net']
 
 
 # Password validation
@@ -156,8 +142,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
