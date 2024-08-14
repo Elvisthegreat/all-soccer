@@ -47,7 +47,7 @@ function handleDeleteButtonClick(event) {
   const slugName = event.target.getAttribute('data-slug_name');
   
   // Update the href of the delete confirmation button in the modal
-  deleteConfirm.href = `/official/delete_comment/${slugName}/${commentId}/`; // Update this URL to your comment deletion endpoint
+  deleteConfirm.href = `/official/delete_comment/${slugName}/${commentId}/`;
   
   // Show the modal
   deleteModal.show();

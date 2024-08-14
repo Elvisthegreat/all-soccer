@@ -16,10 +16,10 @@ class OfficialList(generic.ListView):
 
 
 def official_news(request, slug):
-    queryset = Official.objects.all()
+    queryset = Official.objects.filter(status=1)
     officials = get_object_or_404(queryset, slug=slug)
     comments = officials.comments.all().order_by("created_on")
-    comment_count = officials.comments.all().count()
+    comment_count = officials.filter(approved=True).count()
 
     """Handling the Post request from the comment form"""
     if request.method == 'POST':
