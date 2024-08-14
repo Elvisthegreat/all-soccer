@@ -18,10 +18,12 @@ const submitButton = document.getElementById("submitButton");
 for (let button of editButtons) {
   button.addEventListener("click", (e) => {
     let commentId = e.target.getAttribute("data-comment_id");
+    const slugName = e.target.getAttribute('data-slug_name');
+    console.log('slugName', slugName);
     let commentContent = document.getElementById(`comment${commentId}`).innerText;
     commentText.value = commentContent;
-    submitButton.innerText = "Update";
-    commentForm.setAttribute("action", `edit_comment/${commentId}`) // action attribute to know which comment to update
+    submitButton.innerText = "Update changes";
+    commentForm.setAttribute("action", `/official/${slugName}/edit_comment/${commentId}/`); // action attribute to know which comment to update
 
     // Scroll to the comment form
     commentForm.scrollIntoView({ behavior: "smooth" });
