@@ -70,7 +70,7 @@ def comment_edit(request, slug, comment_id):
         comment = get_object_or_404(Comment, pk=comment_id)
         comment_form = CommentForm(data=request.POST, instance=comment)
 
-        if comment_form.is_valid() and comment.author == request.user: # checking aain if the form is valid and if it still same user
+        if comment_form.is_valid() and comment.author == request.user:
             comment = comment_form.save(commit=False)
             comment.officials = officials
             comment.approved = False # Turn the previous approved commemt to unapproved
