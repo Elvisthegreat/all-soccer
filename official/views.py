@@ -9,7 +9,7 @@ from .forms import CommentForm
 
 
 class OfficialList(generic.ListView):
-    queryset = Official.objects.all().order_by("-created_on")
+    queryset = Official.objects.filter(status=1)
     template_name = "official/official.html"
     paginate_by = None
 
@@ -19,7 +19,7 @@ def official_news(request, slug):
     queryset = Official.objects.filter(status=1)
     officials = get_object_or_404(queryset, slug=slug)
     comments = officials.comments.all().order_by("created_on")
-    comment_count = officials.filter(approved=True).count()
+    comment_count = comments.filter(approved=True).count()
 
     """Handling the Post request from the comment form"""
     if request.method == 'POST':
