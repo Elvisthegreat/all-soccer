@@ -22,13 +22,19 @@ class Official(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
-
+    likes = models.ManyToManyField(User, related_name='official_likes', blank=True)
     class Meta:
         """To display the posts by created_on in ascending order"""
         ordering = ["-created_on"]
 
     def __str__(self):
         return f"{self.title}"
+
+
+class Like(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    official = models.ForeignKey(Official, on_delete=models.CASCADE)
+    created_on = models.DateTimeField(auto_now_add=True)
 
 class Comment(models.Model):
     """

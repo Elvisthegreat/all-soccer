@@ -40,6 +40,17 @@
                         <hr />
                         <p class="white-color-text">{{ officials.created_on}}
                         </p>
+                        <form class="float-left" action="{% url 'like_official' officials.slug %}" method="POST">
+                            {% csrf_token %}
+                            <button id="like-button" data-slug="{{ officials.slug }}">
+                                {% if user in officials.likes.all %}
+                                <span class="text-danger"><i class="fas fa-thumbs-down"></i> unlike</span>
+                                {% else %}
+                                    <span class="text-success"><i class="fas fa-thumbs-up"></i> like</span>
+                                {% endif %}
+                            </button>
+                            <span class="like-count btn-danger">{{ officials.likes.count }}</span>
+                        </form>
                     </div>
                 </div>
             </div>

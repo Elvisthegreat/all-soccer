@@ -1,4 +1,5 @@
 from . import views
+from .views import like_official
 from django.urls import path
 
 
@@ -17,4 +18,5 @@ urlpatterns = [
     path('<slug:slug>/edit_comment/<int:comment_id>/', views.comment_edit, name='comment_edit'), # urls for editing comment
     path('delete_comment/<slug:slug>/<int:comment_id>/',
          views.comment_delete, name='comment_delete'),# urls for deleting comment,
+    path('official/like/<slug:slug>/', views.like_official, name='like_official'),
 ]

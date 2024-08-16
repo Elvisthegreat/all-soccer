@@ -1,6 +1,9 @@
 from django.shortcuts import render, get_object_or_404, reverse
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 from django.views import generic
 from django.contrib import messages
+from django.urls import reverse
 from django.http import HttpResponseRedirect
 from .models import Official, Comment
 from .forms import CommentForm
@@ -48,6 +51,24 @@ def official_news(request, slug):
             "comment_form": comment_form,
         },
     )
+
+@login_required
+def like_official(request, slug):
+    official = get_object_or_404(Official, slug=slug)
+    if request.user in official.likes.all():
+        official.likes.remove(request.user)
+        liked = False
+        messages.add_message(
+            request, messages.SUCCESS,
+            f'You unliked {official.title}.')
+    else:
+        official.likes.add(request.user)
+        liked = True
+        messages.add_message(
+            request, messages.SUCCESS,
+            f'You liked {official.title}.'
+        )
+    return HttpResponseRedirect(reverse('official'))
 
 
 def comment_edit(request, slug, comment_id):
@@ -105,5 +126,14 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('official_news', args=[slug]))
+
+@login_required
+def like_post(request, post_id):
+    official = get_object_or_404(Official, id=post_id)
+    if request.user in official.like_count.all():
+        official.like_count.remove(request.user)
+    else:
+        official.like_count.add(request.user)
+    return redirect('official', post_id=post_id)
 
 
