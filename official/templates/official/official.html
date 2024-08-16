@@ -7,64 +7,62 @@
 <div class="card text-center">
     <div class="container-fluid">
         <div class="row">
+            <header class="col-12">
+                <h1 class="card-header">
+                    Official News
+                </h1>
+            </header>
+            
+            <!-- Officials Entries Column-->
+            <section class="col-12 mt-3 left">
+                <div class="row">
+                    {% for officials in official_list %}
+                    <article class="col-md-4">
+                        <div class="mb-4">
+                            <div class="card-body transparent-bg">
+                                <div class="image-container">
+                                    <!--Cloudinary-->
+                                    <!--If "placeholder" is there, then the default.jpg file in our static folder
+                                         should be displayed. Otherwise, the user-generated image stored on Cloudinary is shown.-->
+                                    {% if "placeholder" in officials.featured_image.url %}
+                                    <img class="card-img-top image-height" src="{% static 'images/ball-image.png' %}" alt="placeholder image">
+                                    {% else %}
+                                    <img class="card-img-top image-height" src="{{ officials.featured_image.url }}" alt="{{ officials.title }}">
+                                    {% endif %}
+                                    <div class="image-flash">
+                                        <p class="author">Author: {{ officials.author }}</p>
+                                    </div>
+                                </div>
+                                <a href="{% url 'official_news' officials.slug %}" class="post-link white-color-text">
+                                    <h2 class="card-title">{{ officials.title }}</h2>
+                                    <p class="card-text">{{ officials.excerpt }}</p>
+                                </a>
 
-    <h1 class="card-header">
-      Official News
-    </h1>
-    
-    <!-- Officials Entries Column-->
-    <div class="col-12 mt-3 left ">
-        <div class="row">
-            {% for officials in official_list %}
-            <div class="col-md-4">
-                <div class="mb-4">
-                    <div class="card-body transparent-bg">
-                        <div class="image-container">
-                            <!--Cloudinary-->
-                            <!--If "placeholder" is there, then the default.jpg file in our static folder
-                                 should be displayed. Otherwise, the user-generated image stored on Cloudinary is shown.-->
-                            {% if "placeholder" in officials.featured_image.url %} <!--start for placeholder-->
-                            <img class="card-img-top image-height" src="{% static 'images/ball-image.png' %}" alt="placeholder image">
-                            {% else %}
-                            <img class="card-img-top image-height" src=" {{ officials.featured_image.url }}" alt="{{ officials.title }}">
-                            {% endif %} <!--End for placeholder-->
-                            <div class="image-flash">
-                                <p class="author">Author: {{ officials.author }}</p>
+                                <hr />
+                                <p class="white-color-text">{{ officials.created_on }}</p>
+                                <form class="float-left" action="{% url 'like_official' officials.slug %}" method="POST">
+                                    {% csrf_token %}
+                                    <button class="like-button" data-slug="{{ officials.slug }}">
+                                        {% if user in officials.likes.all %}
+                                            <span class="text-danger"><i class="fas fa-heart-broken"></i> Unlike</span>
+                                        {% else %}
+                                            <span class="text-success"><i class="fas fa-heart"></i> Like</span>
+                                        {% endif %}
+                                    </button>
+                                    <span class="like-count btn-danger">{{ officials.likes.count }}</span>
+                                </form>
                             </div>
                         </div>
-                        <a href="{% url 'official_news' officials.slug %}" class="post-link white-color-text"> <!-- for the slug title name to display in url browser with the post_detail when a single post is click on-->
-                            <h2 class="card-title">{{ officials.title }}</h2>
-                            <p class="card-text">{{ officials.excerpt }}</p>
-                        </a>
-
-                        <hr />
-                        <p class="white-color-text">{{ officials.created_on}}
-                        </p>
-                        <form class="float-left" action="{% url 'like_official' officials.slug %}" method="POST">
-                            {% csrf_token %}
-                            <button id="like-button" data-slug="{{ officials.slug }}">
-                                {% if user in officials.likes.all %}
-                                <span class="text-danger"><i class="fas fa-thumbs-down"></i> unlike</span>
-                                {% else %}
-                                    <span class="text-success"><i class="fas fa-thumbs-up"></i> like</span>
-                                {% endif %}
-                            </button>
-                            <span class="like-count btn-danger">{{ officials.likes.count }}</span>
-                        </form>
-                    </div>
+                    </article>
+                    {% if forloop.counter|divisibleby:3 %}
                 </div>
-            </div>
-            {% if forloop.counter|divisibleby:3 %} <!--checks to see how many times our for loop has run, divisible by three-->
-        </div>
-        <div class="row">
-            {% endif %}
-            {% endfor %}
-
+                <div class="row">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </section>
         </div>
     </div>
-      
-     </div>
-    </div>
-  </div>
+</div>
 <!-- index.html content ends here -->
 {% endblock %}

@@ -1,51 +1,50 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 
 <div class="card text-center history-background-bvb text-color">
-
-    <Strong>
+    <header>
         <h1 class="marg-top">Borussia Dortmund Club History</h1>
-    </Strong>
+    </header>
 
+    <section>
+        <h2>Foundation and Early Years</h2>
+        <p>Founded on December 19, 1909, Borussia Dortmund, commonly known as BVB, has grown to become one of Germany's most successful football clubs. The club was established by a group of young men dissatisfied with the local church's football team. They sought to create a club that would embody their passion for the game without the restrictions they previously faced.</p>
+    </section>
 
-    <h2>Foundation and Early Years</h2>
-    <p>Founded on December 19, 1909, Borussia Dortmund, commonly known as BVB, has grown to become one of Germany's most
-        successful football clubs. The club was established by a group of young men dissatisfied with the local church's
-        football team. They sought to create a club that would embody their passion for the game without the
-        restrictions they previously faced.</p>
+    <section>
+        <h2>Rise to Prominence</h2>
+        <p>In the mid-1950s, Dortmund began to make its mark on German football, securing its first national titles in 1956 and 1957. This success was a sign of things to come, as the club continued to grow both on and off the pitch.</p>
+    </section>
 
-    <h2>Rise to Prominence</h2>
-    <p>In the mid-1950s, Dortmund began to make its mark on German football, securing its first national titles in 1956
-        and 1957. This success was a sign of things to come, as the club continued to grow both on and off the pitch.
-    </p>
+    <section>
+        <h2>Bundesliga and European Success</h2>
+        <p>With the formation of the Bundesliga in 1963, Dortmund was one of the teams invited to compete in the new top-tier league. They won their first DFB-Pokal in 1965 and followed it up with their first European Cup Winners' Cup in 1966, marking the club's growing stature in European football.</p>
+    </section>
 
-    <h2>Bundesliga and European Success</h2>
-    <p>With the formation of the Bundesliga in 1963, Dortmund was one of the teams invited to compete in the new
-        top-tier league. They won their first DFB-Pokal in 1965 and followed it up with their first European Cup
-        Winners' Cup in 1966, marking the club's growing stature in European football.</p>
+    <section>
+        <h2>Financial Struggles and Recovery</h2>
+        <p>The club faced significant financial challenges in the following decades, narrowly avoiding bankruptcy in 1929 and again during the 1970s. However, the 1990s brought a change in fortune, largely due to the strategic leadership of manager Ottmar Hitzfeld. Under his guidance, Dortmund won consecutive Bundesliga titles in 1995 and 1996 and claimed the UEFA Champions League in 1997.</p>
+    </section>
 
-    <h2>Financial Struggles and Recovery</h2>
-    <p>The club faced significant financial challenges in the following decades, narrowly avoiding bankruptcy in 1929
-        and again during the 1970s. However, the 1990s brought a change in fortune, largely due to the strategic
-        leadership of manager Ottmar Hitzfeld. Under his guidance, Dortmund won consecutive Bundesliga titles in 1995
-        and 1996 and claimed the UEFA Champions League in 1997.</p>
+    <section>
+        <h2>Modern Era and Continued Success</h2>
+        <p>In recent years, Borussia Dortmund has continued to be a force in both domestic and European competitions. The club's commitment to developing young talent has been a key factor in its sustained success, with a reputation for nurturing future stars of the game.</p>
+    </section>
 
-    <h2>Modern Era and Continued Success</h2>
-    <p>In recent years, Borussia Dortmund has continued to be a force in both domestic and European competitions. The
-        club's commitment to developing young talent has been a key factor in its sustained success, with a reputation
-        for nurturing future stars of the game.</p>
+    <section>
+        <h2>Stadium and Fan Culture</h2>
+        <p>Since 1974, Dortmund has played its home games at Westfalenstadion, known for its incredible atmosphere and passionate supporters. The stadium is the largest in Germany and reflects the club's status as one of the most popular in Europe, with the highest average attendance.</p>
+    </section>
 
-    <h2>Stadium and Fan Culture</h2>
-    <p>Since 1974, Dortmund has played its home games at Westfalenstadion, known for its incredible atmosphere and
-        passionate supporters. The stadium is the largest in Germany and reflects the club's status as one of the most
-        popular in Europe, with the highest average attendance.</p>
+    <section>
+        <h2>Legacy and Future</h2>
+        <p>As Borussia Dortmund looks to the future, the club remains focused on maintaining its rich tradition of success while continuing to innovate and develop the next generation of footballing talent.</p>
+    </section>
 
-    <h2>Legacy and Future</h2>
-    <p>As Borussia Dortmund looks to the future, the club remains focused on maintaining its rich tradition of success
-        while continuing to innovate and develop the next generation of footballing talent.</p>
-
-
-    <p class="left marg-top"><em>Created on:</em> {{ ball.created_on }} </p>
+    <footer>
+        <p class="left marg-top"><em>Created on:</em> {{ ball.created_on }}</p>
+    </footer>
 </div>
 
 {% endblock content %}

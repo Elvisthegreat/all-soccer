@@ -1,58 +1,60 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 
 <div class="card text-center history-background-porto text-color">
+    <header>
+        <h1 class="marg-top">History of FC Porto</h1>
+    </header>
 
-    <Strong>
-        <h1 class="marg-top">History of Fc Porto</h1>
-    </Strong>
+    <section>
+        <h2>Foundation and Early Years</h2>
+        <p>FC Porto was founded on <strong>September 28, 1893</strong>, as <em>Foot-Ball Club do Porto</em>. The club was reactivated in 1907 after a period of inactivity and began competing in local competitions and regional championships. The name "Porto" reflects the city where the club was established and has become synonymous with football excellence in Portugal.</p>
+    </section>
 
-    <h2>Foundation and Early Years</h2>
-    <p>FC Porto was founded on <strong>September 28, 1893</strong>, as <em>Foot-Ball Club do Porto</em>. The club was
-        reactivated in 1907 after a period of inactivity and began competing in local competitions and regional
-        championships. The name "Porto" reflects the city where the club was established and has become synonymous with
-        football excellence in Portugal.</p>
+    <section>
+        <h2>Stadiums and Early Achievements</h2>
+        <p>Porto played at various home grounds before moving to the Estádio das Antas in 1952. They won their first national league title in 1935 and achieved a string of successes by the end of the decade. However, it wasn't until the 1970s and 1980s that Porto began to dominate Portuguese football, culminating in their first European Cup victory in 1987.</p>
+    </section>
 
-    <h2>Stadiums and Early Achievements</h2>
-    <p>Porto played at various home grounds before moving to the Estádio das Antas in 1952. They won their first
-        national league title in 1935 and achieved a string of successes by the end of the decade. However, it wasn't
-        until the 1970s and 1980s that Porto began to dominate Portuguese football, culminating in their first European
-        Cup victory in 1987.</p>
+    <section>
+        <h2>Domestic and European Dominance</h2>
+        <p>Under the management of José Mourinho, Porto won the UEFA Cup in 2003 and the UEFA Champions League in 2004, achieving a continental treble of domestic league, domestic cup, and European titles. This period marked Porto as a formidable force in European football.</p>
+    </section>
 
-    <h2>Domestic and European Dominance</h2>
-    <p>Under the management of José Mourinho, Porto won the UEFA Cup in 2003 and the UEFA Champions League in 2004,
-        achieving a continental treble of domestic league, domestic cup, and European titles. This period marked Porto
-        as a formidable force in European football.</p>
+    <section>
+        <h2>Estádio do Dragão and Rivalries</h2>
+        <p>Since 2003, Porto has played its home matches at the Estádio do Dragão, succeeding the Estádio das Antas. The club has intense rivalries with Benfica and Sporting CP, forming the Portuguese "Big Three."</p>
+    </section>
 
-    <h2>Estádio do Dragão and Rivalries</h2>
-    <p>Since 2003, Porto has played its home matches at the Estádio do Dragão, succeeding the Estádio das Antas. The
-        club has intense rivalries with Benfica and Sporting CP, forming the Portuguese "Big Three."</p>
+    <section>
+        <h2>Legacy and Ownership</h2>
+        <p>FC Porto is one of the most decorated teams in Portuguese football, with numerous league titles, Taça de Portugal victories, and significant European trophies. The club has consistently competed at the highest level and is known for its passionate supporters, called 'portistas.'</p>
+    </section>
 
-    <h2>Legacy and Ownership</h2>
-    <p>FC Porto is one of the most decorated teams in Portuguese football, with numerous league titles, Taça de Portugal
-        victories, and significant European trophies. The club has consistently competed at the highest level and is
-        known for its passionate supporters, called 'portistas.'</p>
+    <section>
+        <h2>Recent Achievements</h2>
+        <p>In recent years, Porto has continued to be a dominant force in Portuguese football, winning five league titles in a row from 1995 to 1999 and achieving an undefeated league season in 2010–11. They have also been successful in European competitions, with two UEFA Cup/Europa League victories in 2003 and 2011.</p>
+    </section>
 
-    <h2>Recent Achievements</h2>
-    <p>In recent years, Porto has continued to be a dominant force in Portuguese football, winning five league titles in
-        a row from 1995 to 1999 and achieving an undefeated league season in 2010–11. They have also been successful in
-        European competitions, with two UEFA Cup/Europa League victories in 2003 and 2011.</p>
+    <section>
+        <h2>Current Squad and Management</h2>
+        <p>The current squad continues to feature talented players who contribute to the club's ongoing success. The management, led by President Jorge Nuno Pinto da Costa, has been instrumental in maintaining Porto's competitive edge.</p>
+    </section>
 
-    <h2>Current Squad and Management</h2>
-    <p>The current squad continues to feature talented players who contribute to the club's ongoing success. The
-        management, led by President Jorge Nuno Pinto da Costa, has been instrumental in maintaining Porto's competitive
-        edge.</p>
+    <section>
+        <h2>Community and Social Responsibility</h2>
+        <p>FC Porto is deeply connected to the community and engages in various social initiatives. The club's commitment to social responsibility is evident in its support for education, social inclusion, and children's rights.</p>
+    </section>
 
-    <h2>Community and Social Responsibility</h2>
-    <p>FC Porto is deeply connected to the community and engages in various social initiatives. The club's commitment to
-        social responsibility is evident in its support for education, social inclusion, and children's rights.</p>
+    <section>
+        <h2>Looking Forward</h2>
+        <p>As FC Porto looks to the future, the club remains dedicated to building upon its illustrious history while striving for continued success in both domestic and international arenas.</p>
+    </section>
 
-    <h2>Looking Forward</h2>
-    <p>As FC Porto looks to the future, the club remains dedicated to building upon its illustrious history while
-        striving for continued success in both domestic and international arenas.</p>
-
-
-    <p class="left marg-top"><em>Created on:</em> {{ ball.created_on }} </p>
+    <footer>
+        <p class="left marg-top"><em>Created on:</em> {{ ball.created_on }}</p>
+    </footer>
 </div>
 
 {% endblock content %}

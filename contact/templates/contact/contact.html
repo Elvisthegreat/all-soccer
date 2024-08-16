@@ -4,24 +4,21 @@
 {% load crispy_forms_tags %}
 
 <div class="card text-center white-color-text bg-color-contact-us">
-    <div class="card-header">
-      <h2>Curious to know more about <span class="all">All </span> <span id="slash">/</span> <span class="all"> Football</span>?</h2>
-      <p>Why not fill out the form to reach out to our creators</p>
-    </div>
+    <header class="card-header">
+        <h2>Curious to know more about <span class="all">All </span> <span id="slash">/</span> <span class="all"> Football</span>?</h2>
+        <p>Why not fill out the form to reach out to our creators</p>
+    </header>
     <div class="card-body">
-      {% if user.is_authenticated %}
-        <form method="post" class="add-padding-crispy-form">
-            {{ contact_form | crispy }} <!--With this we displayed the name, email and messages forms in the Contact us section-->
-            {% csrf_token %}
-            <button type="submit" class="btn btn-success right green">Submit</button>
-        </form>
+        {% if user.is_authenticated %}
+            <form method="post" class="add-padding-crispy-form">
+                {{ contact_form | crispy }} <!-- Displaying the name, email, and message forms in the Contact Us section -->
+                {% csrf_token %}
+                <button type="submit" class="btn btn-success right green">Submit</button>
+            </form>
         {% else %}
-        <p>Please login <a class="link" href="{{ login_url }}">log in</a> or sign up <a class="link" href="{{ signup_url }}">sign up</a></p>
+            <p>Please <a class="link" href="{{ login_url }}">log in</a> or <a class="link" href="{{ signup_url }}">sign up</a> to reach out to us.</p>
         {% endif %}
     </div>
-    </div>
-    
-    
-  </div>
+</div>
 
 {% endblock content %}

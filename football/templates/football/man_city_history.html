@@ -1,65 +1,72 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 
 <div class="card text-center history-background-man-city text-color">
-
-    <Strong>
+    <header>
         <h1 class="marg-top">Manchester City Football Club History</h1>
-    </Strong>
+    </header>
 
-    <h2>Foundation and Early Years</h2>
-    <p>Manchester City Football Club, often referred to as Man City, was founded in 1880 as St. Mark's Church by Arthur
-        Connell, the rector of St Mark's Church, and his daughter, Anna Connell. The club underwent several name changes
-        as Gorton FC and Ardwick AFC before settling on Manchester City in 1894.</p>
+    <section>
+        <h2>Foundation and Early Years</h2>
+        <p>Manchester City Football Club, often referred to as Man City, was founded in 1880 as St. Mark's Church by Arthur Connell, the rector of St Mark's Church, and his daughter, Anna Connell. The club underwent several name changes as Gorton FC and Ardwick AFC before settling on Manchester City in 1894.</p>
+    </section>
 
-    <h2>Major Honours</h2>
-    <p>Manchester City have won thirty-four major honours throughout their history: nine league titles, seven FA Cups,
-        eight League Cups, six FA Charity/Community Shields, one UEFA Champions League, one European Cup Winners' Cup,
-        one UEFA Super Cup, and one FIFA Club World Cup.</p>
+    <section>
+        <h2>Major Honours</h2>
+        <p>Manchester City have won thirty-four major honours throughout their history: nine league titles, seven FA Cups, eight League Cups, six FA Charity/Community Shields, one UEFA Champions League, one European Cup Winners' Cup, one UEFA Super Cup, and one FIFA Club World Cup.</p>
+    </section>
 
-    <h2>Notable Records</h2>
-    <p>Manchester City holds several records such as the most points in a season (100 in Premier League, 2017/18), most
-        league goals in a season (108 in Division Two, 1926/27: 42 games), most goals in a season (all competitions: 169
-        in 2018/19), and highest home attendance (84,569 v Stoke City, 3 March 1934).</p>
+    <section>
+        <h2>Notable Records</h2>
+        <p>Manchester City holds several records such as the most points in a season (100 in Premier League, 2017/18), most league goals in a season (108 in Division Two, 1926/27: 42 games), most goals in a season (all competitions: 169 in 2018/19), and highest home attendance (84,569 v Stoke City, 3 March 1934).</p>
+    </section>
 
-    <h2>Recent Success</h2>
-    <p>In recent years, Manchester City has seen a resurgence in success, with notable achievements such as becoming the
-        first club to win an English domestic treble in 2018/19 (plus 2018 FA Community/Charity Shield), and setting the
-        record for the longest winning run of games in a calendar year with 13 wins from 3 January to 2 March 2021.</p>
+    <section>
+        <h2>Recent Success</h2>
+        <p>In recent years, Manchester City has seen a resurgence in success, with notable achievements such as becoming the first club to win an English domestic treble in 2018/19 (plus 2018 FA Community/Charity Shield), and setting the record for the longest winning run of games in a calendar year with 13 wins from 3 January to 2 March 2021.</p>
+    </section>
 
-    <h1>Manchester City Trophies</h1>
+    <header>
+        <h1>Manchester City Trophies</h1>
+    </header>
 
-    <p>Manchester City Football Club, commonly known as Man City, has an impressive trophy cabinet with numerous honours
-        won over the years. Since the club's formation in 1880, Man City has secured a total of 34 trophies across
-        various competitions.</p>
+    <section>
+        <p>Manchester City Football Club, commonly known as Man City, has an impressive trophy cabinet with numerous honours won over the years. Since the club's formation in 1880, Man City has secured a total of 34 trophies across various competitions.</p>
+    </section>
 
-    <h2>Team Honours</h2>
-    <p>Man City's journey to success began with their victory in the 1904 FA Cup. Since then, they have consistently
-        added to their trophy collection. Notable team honours include:</p>
-    <ul>
-        <li>Nine top division titles</li>
-        <li>Seven FA Cups</li>
-        <li>Eight League Cups (Carabao Cups)</li>
-        <li>Six FA Community Shields</li>
-        <li>One UEFA Champions League title</li>
-        <li>One European Cup Winners' Cup</li>
-        <li>One UEFA Super Cup</li>
-        <li>One FIFA Club World Cup</li>
-    </ul>
+    <section>
+        <h2>Team Honours</h2>
+        <p>Man City's journey to success began with their victory in the 1904 FA Cup. Since then, they have consistently added to their trophy collection. Notable team honours include:</p>
+        <ul>
+            <li>Nine top division titles</li>
+            <li>Seven FA Cups</li>
+            <li>Eight League Cups (Carabao Cups)</li>
+            <li>Six FA Community Shields</li>
+            <li>One UEFA Champions League title</li>
+            <li>One European Cup Winners' Cup</li>
+            <li>One UEFA Super Cup</li>
+            <li>One FIFA Club World Cup</li>
+        </ul>
+    </section>
 
-    <h2>Individual Honours</h2>
-    <p>Man City players have also achieved individual success. Their contributions to the club's triumphs have been
-        recognized with various awards and accolades.</p>
+    <section>
+        <h2>Individual Honours</h2>
+        <p>Man City players have also achieved individual success. Their contributions to the club's triumphs have been recognized with various awards and accolades.</p>
+    </section>
 
-    <h2>Club Honours</h2>
-    <p>Off the field, Manchester City has received additional awards and honours. These recognitions highlight the
-        club's impact beyond the pitch.</p>
+    <section>
+        <h2>Club Honours</h2>
+        <p>Off the field, Manchester City has received additional awards and honours. These recognitions highlight the club's impact beyond the pitch.</p>
+    </section>
 
-    <p>From their early days to their modern dominance, Man City's trophy record reflects their status as a football
-        powerhouse.</p>
+    <section>
+        <p>From their early days to their modern dominance, Man City's trophy record reflects their status as a football powerhouse.</p>
+    </section>
 
-
-    <p class="left marg-top"><em>Created on:</em> {{ ball.created_on }} </p>
+    <footer>
+        <p class="left marg-top"><em>Created on:</em> {{ ball.created_on }}</p>
+    </footer>
 </div>
 
 {% endblock content %}

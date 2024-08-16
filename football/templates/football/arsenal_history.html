@@ -1,44 +1,63 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
 
 <div class="card text-center history-background-arsenal text-color">
-
-    <Strong>
+    <header>
         <h1 class="marg-top">The History of Arsenal Football Club</h1>
-    </Strong>
+    </header>
     
     <p>Arsenal Football Club, founded in 1886, has a rich and storied history. Let's explore the journey of the Gunners from their humble beginnings to their current status as a Premier League powerhouse.</p>
 
-    <h2>Laying the Foundations</h2>
-    <p>In late 1886, a group of workers from the Woolwich Arsenal Armament Factory decided to form a football team. They called themselves Dial Square, a nod to the sundial atop the factory entrance. This marked the birth of Arsenal Football Club[^1^][1].</p>
+    <section>
+        <h2>Laying the Foundations</h2>
+        <p>In late 1886, a group of workers from the Woolwich Arsenal Armament Factory decided to form a football team. They called themselves Dial Square, a nod to the sundial atop the factory entrance. This marked the birth of Arsenal Football Club.</p>
+    </section>
 
-    <h2>Herbert Chapman Era</h2>
-    <p>Herbert Chapman, one of the most influential managers in Arsenal's history, led the club to success in the 1920s and 1930s. Under his guidance, Arsenal won their first league titles and established themselves as a dominant force in English football.</p>
+    <section>
+        <h2>Herbert Chapman Era</h2>
+        <p>Herbert Chapman, one of the most influential managers in Arsenal's history, led the club to success in the 1920s and 1930s. Under his guidance, Arsenal won their first league titles and established themselves as a dominant force in English football.</p>
+    </section>
 
-    <h2>Post-War Arsenal</h2>
-    <p>After World War II, Arsenal continued to thrive. Players like Cliff Bastin, Ted Drake, and Alex James contributed to the club's success. The 1950s saw more league titles and FA Cup triumphs.</p>
+    <section>
+        <h2>Post-War Arsenal</h2>
+        <p>After World War II, Arsenal continued to thrive. Players like Cliff Bastin, Ted Drake, and Alex James contributed to the club's success. The 1950s saw more league titles and FA Cup triumphs.</p>
+    </section>
 
-    <h2>The Seventies</h2>
-    <p>The 1970s were a memorable decade for Arsenal. Talented players like Liam Brady and Frank Stapleton graced Highbury. The Gunners clinched the league title in 1971 and reached European finals.</p>
+    <section>
+        <h2>The Seventies</h2>
+        <p>The 1970s were a memorable decade for Arsenal. Talented players like Liam Brady and Frank Stapleton graced Highbury. The Gunners clinched the league title in 1971 and reached European finals.</p>
+    </section>
 
-    <h2>Graham's Glory Years</h2>
-    <p>Under George Graham's management in the late 1980s and early 1990s, Arsenal won league titles, FA Cups, and the League Cup. The famous back four—Lee Dixon, Tony Adams, Steve Bould, and Nigel Winterburn—became legendary.</p>
+    <section>
+        <h2>Graham's Glory Years</h2>
+        <p>Under George Graham's management in the late 1980s and early 1990s, Arsenal won league titles, FA Cups, and the League Cup. The famous back four—Lee Dixon, Tony Adams, Steve Bould, and Nigel Winterburn—became legendary.</p>
+    </section>
 
-    <h2>The Wenger Years</h2>
-    <p>Arsène Wenger's tenure from 1996 to 2018 brought a revolution. The Invincibles of 2003–04 went unbeaten in the league, and players like Thierry Henry, Dennis Bergkamp, and Patrick Vieira left an indelible mark.</p>
+    <section>
+        <h2>The Wenger Years</h2>
+        <p>Arsène Wenger's tenure from 1996 to 2018 brought a revolution. The Invincibles of 2003–04 went unbeaten in the league, and players like Thierry Henry, Dennis Bergkamp, and Patrick Vieira left an indelible mark.</p>
+    </section>
 
-    <h2>Gunners Greatest</h2>
-    <p>Arsenal's greatest goals, players, and moments are etched in football history. From Henry's wonder goals to Bergkamp's artistry, the Gunners have left fans in awe.</p>
+    <section>
+        <h2>Gunners Greatest</h2>
+        <p>Arsenal's greatest goals, players, and moments are etched in football history. From Henry's wonder goals to Bergkamp's artistry, the Gunners have left fans in awe.</p>
+    </section>
 
-    <h2>Club Records</h2>
-    <p>Arsenal boasts impressive records, including appearances, attendances, and goalscorers. Their unbeaten streak of 49 league matches remains iconic.</p>
+    <section>
+        <h2>Club Records</h2>
+        <p>Arsenal boasts impressive records, including appearances, attendances, and goalscorers. Their unbeaten streak of 49 league matches remains iconic.</p>
+    </section>
 
-    <h2>The Spirit of Highbury</h2>
-    <p>Highbury, Arsenal's historic home from 1913 to 2006, holds a special place in fans' hearts. The clock end, the marble halls, and the red-and-white mosaic evoke nostalgia.</p>
+    <section>
+        <h2>The Spirit of Highbury</h2>
+        <p>Highbury, Arsenal's historic home from 1913 to 2006, holds a special place in fans' hearts. The clock end, the marble halls, and the red-and-white mosaic evoke nostalgia.</p>
+    </section>
 
-    <p>For more details, visit the <a href="https://www.arsenal.com/history">official Arsenal FC history page</a>. Whether you're a die-hard Gooner or a curious newcomer, Arsenal's journey is a captivating tale of passion and triumph.</p>
-
-    <p class="left marg-top"><em>Created on:</em> {{ ball.created_on }} </p>
+    <footer>
+        <p>For more details, visit the <a href="https://www.arsenal.com/history">official Arsenal FC history page</a>. Whether you're a die-hard Gooner or a curious newcomer, Arsenal's journey is a captivating tale of passion and triumph.</p>
+        <p class="left marg-top"><em>Created on:</em> {{ ball.created_on }}</p>
+    </footer>
 </div>
 
 {% endblock content %}
