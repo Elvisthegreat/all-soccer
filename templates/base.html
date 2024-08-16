@@ -122,8 +122,19 @@
 
     </main>
 
+    
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-dark text-white py-4">
+    <footer class="bg-dark text-white py-5">
+
+      <div class="container mb-5">
+        <div class="text-center">
+          <p id="footer-date"  style="font-weight: bold;"></p>
+          <p id="footer-message"  style="font-weight: bold;"></p>
+        </div>
+      </div>
+
       <div class="container">
           <div class="row">
               <div class="col-md-6">
@@ -204,6 +215,7 @@
       
       <!--To load our script.js file in static/js-->
 {% block script %}
+    <script src="{% static 'js/randompost.js' %}"></script>
 {% endblock %}
   </body>
 </html>
