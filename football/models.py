@@ -21,6 +21,6 @@ class Football(models.Model):
 
     def __str__(self):
         """Return a string representation of the object (the post's title and author)."""
-        return f"{self.title} | written by {self.author}"
+        return f"{self.title} | written by {self.title}"
 
 

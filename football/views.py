@@ -10,11 +10,6 @@ class FootballList(generic.ListView):
     template_name = "football/index.html"
 
 
-def match_detail(request):
-    matches = Football.objects.all()
-    return render(request, 'match_detail.html', {'matches': matches})
-
-
 def preview1(request, slug):
     queryset = Football.objects.all()
     ball = get_object_or_404(queryset, slug=slug)

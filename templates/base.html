@@ -43,8 +43,10 @@
 
     <!--Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white py-4 font-caveat">
-      <div class="container-fluid">
-        <a class="navbar-brand text-white" href="{% url 'home' %}"><span class="all">All </span> <span id="slash">/</span> <span class="all"> Football</span></a>
+      <div class="container-fluid d-flex justify-content-between">
+        <a class="navbar-brand text-white" href="{% url 'home' %}">
+          <span class="all">All </span> <span id="slash">/</span> <span class="all"> Football</span>
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -55,49 +57,42 @@
               <a class="nav-link text-white hover-color-bg {% if request.path == home_url %}active" aria-current="page{% endif %}"
               href="{% url 'home' %}">Home</a>
             </li>
-            
             <li class="nav-item active">
               <a class="nav-link text-white hover-color-bg {% if request.path == official_url %}active" aria-current="page{% endif %}"
               href="{% url 'official' %}">Official</a>
             </li>
-
             <li class="nav-item active">
               <a class="nav-link text-white hover-color-bg {% if request.path == contact_url %}active" aria-current="page{% endif %}"
               href="{% url 'contact' %}">Contact Us</a>
             </li>
-            
-            <!--Authentication-->
             {% if user.is_authenticated %}
             <li class="nav-item">
-                <a class="nav-link text-white hover-color-bg {% if request.path == logout_url %}active" aria-current="page{% endif %}"
-                    href="{% url 'account_logout' %}">Logout</a>
+              <a class="nav-link text-white hover-color-bg {% if request.path == logout_url %}active" aria-current="page{% endif %}"
+                  href="{% url 'account_logout' %}">Logout</a>
             </li>
             {% else %}
             <li class="nav-item">
-                <a class="nav-link text-white hover-color-bg {% if request.path == signup_url %}active" aria-current="page{% endif %}"
-                    href="{% url 'account_signup' %}">Sign UP</a>
+              <a class="nav-link text-white hover-color-bg {% if request.path == signup_url %}active" aria-current="page{% endif %}"
+                  href="{% url 'account_signup' %}">Sign UP</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white hover-color-bg {% if request.path == login_url %}active" aria-current="page{% endif %}"
-                    href="{% url 'account_login' %}">Login</a>
+              <a class="nav-link text-white hover-color-bg {% if request.path == login_url %}active" aria-current="page{% endif %}"
+                  href="{% url 'account_login' %}">Login</a>
             </li>
             {% endif %}
-        </ul>
-    
+          </ul>
         </div>
-
-           <!--For user when logged in-->
-           <div style="text-align: right;">
-            {% if user.is_authenticated %}
-            <p class="text-end m-3 white-color-text">You are logged in as {{ user }}</p>
-            
-            {% else %}
-            <p class="text-end m-3 white-color-text">You are not logged in</p>
-    
-            {% endif %}
-            </div>
+        <div style="text-align: right;">
+          {% if user.is_authenticated %}
+          <p class="text-end m-3 white-color-text">You are logged in as {{ user }}</p>
+          {% else %}
+          <p class="text-end m-3 white-color-text">You are not logged in</p>
+          {% endif %}
+        </div>
       </div>
-      </nav>
+    </nav>
+    
+    
         <!-- displaying Django success messages -->
         <!--Id success-message refer to our js un base.html-->
         <div class="container" id="success-message">
