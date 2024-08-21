@@ -64,9 +64,12 @@
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
-                    <a target="_blank">
-                        <img class="card-img-top img-fluid" src="{{ comment.featured_image.url }}" alt="comment profile image" style="max-width: 300px; width: 50%; height: auto;">
-                    </a>
+                    <!--Check if image is associated-->
+                    {% if testimonial.image %}
+                        <a href="{{ comment.featured_image.url }}" target="_blank">
+                            <img class="card-img-top img-fluid" src="{{ comment.featured_image.url }}" alt="comment profile image" style="max-width: 300px; width: 50%; height: auto;">
+                        </a>
+                    {% endif %}
                     {% if not comment.approved and comment.author == user %}
                         <p class="approval">This comment is awaiting approval</p>
                     {% endif %}
