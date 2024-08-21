@@ -50,6 +50,7 @@ class Comment(models.Model):
     body = models.TextField()
     approved = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
+    featured_image = CloudinaryField('image', null=True, blank=True)
 
     class Mata:
         ordering= ["created_on"]

@@ -17,6 +17,24 @@ class OfficialList(generic.ListView):
     paginate_by = None
 
 
+@login_required
+def like_official(request, slug):
+    official = get_object_or_404(Official, slug=slug)
+    if request.user in official.likes.all():
+        official.likes.remove(request.user)
+        liked = False
+        messages.add_message(
+            request, messages.SUCCESS,
+            f'You unliked {official.title}.')
+    else:
+        official.likes.add(request.user)
+        liked = True
+        messages.add_message(
+            request, messages.SUCCESS,
+            f'You liked {official.title}.'
+        )
+    return HttpResponseRedirect(reverse('official'))
+
 
 def official_news(request, slug):
     queryset = Official.objects.filter(status=1)
@@ -24,9 +42,9 @@ def official_news(request, slug):
     comments = officials.comments.all().order_by("created_on")
     comment_count = comments.filter(approved=True).count()
 
-    """Handling the Post request from the comment form"""
+    """Handling the Post request for the comment form"""
     if request.method == 'POST':
-        comment_form = CommentForm(data=request.POST)
+        comment_form = CommentForm(data=request.POST, files=request.FILES)
         if comment_form.is_valid():
             comment = comment_form.save(commit=False)
             comment.author = request.user
@@ -51,24 +69,6 @@ def official_news(request, slug):
             "comment_form": comment_form,
         },
     )
-
-@login_required
-def like_official(request, slug):
-    official = get_object_or_404(Official, slug=slug)
-    if request.user in official.likes.all():
-        official.likes.remove(request.user)
-        liked = False
-        messages.add_message(
-            request, messages.SUCCESS,
-            f'You unliked {official.title}.')
-    else:
-        official.likes.add(request.user)
-        liked = True
-        messages.add_message(
-            request, messages.SUCCESS,
-            f'You liked {official.title}.'
-        )
-    return HttpResponseRedirect(reverse('official'))
 
 
 def comment_edit(request, slug, comment_id):
@@ -103,7 +103,6 @@ def comment_edit(request, slug, comment_id):
     return HttpResponseRedirect(reverse('official_news', args=[slug]))
 
 
-
 def comment_delete(request, slug, comment_id):
     """
     Delete an individual comment.
@@ -126,14 +125,5 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete your own comments!')
 
     return HttpResponseRedirect(reverse('official_news', args=[slug]))
-
-@login_required
-def like_post(request, post_id):
-    official = get_object_or_404(Official, id=post_id)
-    if request.user in official.like_count.all():
-        official.like_count.remove(request.user)
-    else:
-        official.like_count.add(request.user)
-    return redirect('official', post_id=post_id)
 
 

@@ -110,7 +110,7 @@ body{
     font-size:25px ;
 }
 
-#slash{
+.slash{
     font-weight: 300;
     color: red;
 }

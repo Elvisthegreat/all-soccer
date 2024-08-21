@@ -40,7 +40,7 @@
         <div class="card-body">
             {% if user.is_authenticated %}
                 <h3 class="push-down-little">Leave a comment:</h3>
-                <form class="answer-box" id="commentForm" method="post">
+                <form class="answer-box" id="commentForm" method="post" enctype="multipart/form-data">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
                     <div class="col-auto">
@@ -59,18 +59,20 @@
         <div class="card-body">
             {% for comment in comments %}
                 <article class="p-2 comments
-                {% if not comment.approved and comment.author == user %}
-                faded{% elif not comment.approved %} d-none{% endif %}">
+                {% if not comment.approved and comment.author == user %}faded{% elif not comment.approved %} d-none{% endif %}">
                     <p class="card-text">{{ comment.author }} <span>{{ comment.created_on }}</span></p>
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
+                    <a target="_blank">
+                        <img class="card-img-top img-fluid" src="{{ comment.featured_image.url }}" alt="comment profile image" style="max-width: 300px; width: 50%; height: auto;">
+                    </a>
                     {% if not comment.approved and comment.author == user %}
                         <p class="approval">This comment is awaiting approval</p>
                     {% endif %}
                     <!-- Edit and Delete buttons visible only when users are logged-in -->
                     {% if user.is_authenticated and comment.author == user %}
-                        <div class="dropdown">
+                        <div class="dropdown  mt-2">
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="commentActions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 ...
                             </button>

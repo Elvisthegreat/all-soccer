@@ -110,7 +110,7 @@ body{
     font-size:25px ;
 }
 
-#slash{
+.slash{
     font-weight: 300;
     color: red;
 }
@@ -162,6 +162,10 @@ body{
 .madrid7-png{
     height: 78px;
     width: 60px;
+}
+
+label[for="id_image"] {
+    display: none;
 }
 
 .monaco-png{
@@ -370,6 +374,17 @@ body{
 
 .push-down-little{
     margin-top: 60px;
+}
+
+
+/* Hide body & image form label */
+
+label[for="id_body"] {
+    display: none;
+}
+
+label[for="id_featured_image"] {
+    display: none;
 }
 
 
