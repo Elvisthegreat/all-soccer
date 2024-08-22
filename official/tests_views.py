@@ -17,7 +17,7 @@ class TestOfficialViews(TestCase):
         )
         self.ball = Official(title="Official title", author=self.user,
                          slug="official-title", excerpt="Official excerpt",
-                         content="Official content")
+                         content="Official content", status=1)
         self.ball.save()
 
     def test_render_official_news_page_with_comment_form(self):
@@ -48,5 +48,5 @@ class TestOfficialViews(TestCase):
             reverse('official_news', args=['official-title']), post_data)
         self.assertEqual(response.status_code, 200)
         self.assertIn(
-            b'Comment submitted successful',
+            b'Comment submitted successfully',
             response.content)
