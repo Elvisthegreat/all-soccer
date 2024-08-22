@@ -68,8 +68,8 @@
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
-                    <!--Check if image is associated-->
-                    {% if testimonial.image %}
+                    <!-- Check if the comment has an associated featured image and display it -->
+                    {% if comment.featured_image %}
                         <a href="{{ comment.featured_image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ comment.featured_image.url }}" alt="comment profile image" style="max-width: 300px; width: 50%; height: auto;">
                         </a>
