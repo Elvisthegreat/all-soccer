@@ -25,8 +25,11 @@ for (let button of editButtons) {
     submitButton.innerText = "Update changes";
     commentForm.setAttribute("action", `/official/${slugName}/edit_comment/${commentId}/`); // action attribute to know which comment to update
 
-    // Scroll to the comment form
-    commentForm.scrollIntoView({ behavior: "smooth" });
+    // Scroll to the comment text box and center it in the viewport
+    window.scrollTo({
+      top: commentText.offsetTop - (window.innerHeight / 2) + (commentText.offsetHeight / 2),
+      behavior: 'smooth'
+    });
   });
 }
 
