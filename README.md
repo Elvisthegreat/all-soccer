@@ -12,6 +12,7 @@
   - [Users Stories](#user-stories)
   - [Kanban](#kanban)
   - [Epic & Overview](#epic-%-overview)
+  - [ERD Diagram](#erd-diagram)
   - [Design](#design)
     - [Design Idea](#design-idea)
     - [Background design](#background-design)
@@ -26,13 +27,13 @@
   - [Validation](#validation)
   - [Testng](#testing)
   - [Manual Testing](#manual-testing)
-  -[Automated testing](#automated-testing)
-  -[Bugs](#bugs)
-  -[Fix](#fix)
-  -[Deployment to Heroku](#deployment-to-heroku)
-  -[Fork Repository](#fork-repository)
-  -[Clone Repository](#clone-repository)
-  -[Credit and Acknowledgements][#credit-and-acknowledgements]
+  - [Automated testing](#automated-testing)
+  - [Bugs](#bugs)
+  - [Fix](#fix)
+  - [Deployment to Heroku](#deployment-to-heroku)
+  - [Fork Repository](#fork-repository)
+  - [Clone Repository](#clone-repository)
+  - [Credit and Acknowledgements](#credit-and-acknowledgements)
 
 ### About 
 <strong>All / Football</strong> is a page about football, about soccer. A page were weekly game games are schedule e.g la Liga, Premier league or champions league, and created by football enthusiastic
@@ -101,6 +102,14 @@
 ![Screenshot (814)](https://github.com/user-attachments/assets/200564ef-c975-4474-9c82-047ddf10aa1b)
 
 ![Screenshot (812)](https://github.com/user-attachments/assets/3454440d-fc78-4932-a657-05387f4a271d)
+</details>
+
+### ERD Diagram
+   created with LucidChart
+<details>
+<summary>View ERD Diagram</summary>
+
+![Screenshot (817)](https://github.com/user-attachments/assets/7ec052f3-86a7-4ca0-b7e2-3f9d60290d5f)
 </details>
 
 ## Design
