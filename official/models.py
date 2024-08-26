@@ -31,11 +31,6 @@ class Official(models.Model):
         return f"{self.title}"
 
 
-class Like(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    official = models.ForeignKey(Official, on_delete=models.CASCADE)
-    created_on = models.DateTimeField(auto_now_add=True)
-
 class Comment(models.Model):
     """
     Stores a single comment entry related to :model:`auth.User`
