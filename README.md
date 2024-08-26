@@ -11,6 +11,7 @@
   - [Users Experience](#users-experience)
   - [Users Stories](#user-stories)
   - [Kanban](#kanban)
+  - [Epic & Overview](#epic-%-overview)
   - [Design](#design)
     - [Design Idea](#design-idea)
     - [Background design](#background-design)
@@ -92,6 +93,15 @@
 ## Kanban
    Kanban was used has a baord to structure out each users stories, to keep track of my plans, to remember what am working on, what i should do next and what has already be done.
    ![Screenshot (465)](https://github.com/Elvisthegreat/Rock-paper-scissors/assets/141064225/48d6fa76-4f44-41a1-a5cc-78b2b10432f4)
+
+### Epic & Overview
+<details>
+<summary>View Epic & Overview</summary>
+
+![Screenshot (814)](https://github.com/user-attachments/assets/200564ef-c975-4474-9c82-047ddf10aa1b)
+
+![Screenshot (812)](https://github.com/user-attachments/assets/3454440d-fc78-4932-a657-05387f4a271d)
+</details>
 
 ## Design
 ### Design Idea
