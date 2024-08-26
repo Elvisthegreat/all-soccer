@@ -164,6 +164,10 @@ body{
     width: 60px;
 }
 
+label[for="id_image"] {
+    display: none;
+}
+
 .monaco-png{
     height: 76px;
     width: 79px;
@@ -370,6 +374,17 @@ body{
 
 .push-down-little{
     margin-top: 60px;
+}
+
+
+/* Hide body & image form label */
+
+label[for="id_body"] {
+    display: none;
+}
+
+label[for="id_featured_image"] {
+    display: none;
 }
 
 

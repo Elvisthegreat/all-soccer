@@ -1,35 +1,37 @@
-document.addEventListener('DOMContentLoaded', (event) => {
+// Edit
+const editButtons = document.getElementsByClassName("btn-edit");
+const commentText = document.getElementById("id_body");
+const commentForm = document.getElementById("commentForm");
+const submitButton = document.getElementById("submitButton");
 
-// Edit section
 
-// Each edit button has a data attribute 'data-comment_id' with the comment's ID
-const editButtons = document.querySelectorAll('.btn-edit');
+/**
+* Initializes edit functionality for the provided edit buttons.
+* 
+* For each button in the `editButtons` collection:
+* - Retrieves the associated comment's ID upon click.
+* - Fetches the content of the corresponding comment.
+* - Populates the `commentText` input/textarea with the comment's content for editing.
+* - Updates the submit button's text to "Update".
+* - Sets the form's action attribute to the `edit_comment/{commentId}` endpoint.
+*/
+for (let button of editButtons) {
+  button.addEventListener("click", (e) => {
+    let commentId = e.target.getAttribute("data-comment_id");
+    const slugName = e.target.getAttribute('data-slug_name');
+    console.log('slugName', slugName);
+    let commentContent = document.getElementById(`comment${commentId}`).innerText;
+    commentText.value = commentContent;
+    submitButton.innerText = "Update changes";
+    commentForm.setAttribute("action", `/official/${slugName}/edit_comment/${commentId}/`); // action attribute to know which comment to update
 
-// Function to handle the edit button click event
-function handleEditButtonClick(event) {
-  // Retrieve the comment ID from the data attribute of the clicked button
-  const commentId = event.target.getAttribute('data-comment_id');
-  
-  // Find the comment text element by its ID
-  const commentTextElement = document.getElementById('comment' + commentId);
-  
-  // Extract the text content of the comment
-  const commentText = commentTextElement.textContent || commentTextElement.innerText;
-  
-  // Set the text content as the value of the comment form's textarea
-  document.getElementById('id_body').value = commentText;
-  
-  // Optionally, scroll to the comment form and focus the textarea
-  document.getElementById('commentForm').scrollIntoView();
-  document.getElementById('id_body').focus();
+    // Scroll to the comment text box and center it in the viewport
+    window.scrollTo({
+      top: commentText.offsetTop - (window.innerHeight / 2) + (commentText.offsetHeight / 2),
+      behavior: 'smooth'
+    });
+  });
 }
-
-// Add click event listeners to each edit button
-editButtons.forEach(button => {
-  button.addEventListener('click', handleEditButtonClick);
-});
-
-
 
 // Delete section
 
@@ -47,7 +49,7 @@ function handleDeleteButtonClick(event) {
   const slugName = event.target.getAttribute('data-slug_name');
   
   // Update the href of the delete confirmation button in the modal
-  deleteConfirm.href = `/official/delete_comment/${slugName}/${commentId}/`; // Update this URL to your comment deletion endpoint
+  deleteConfirm.href = `/official/delete_comment/${slugName}/${commentId}/`;
   
   // Show the modal
   deleteModal.show();
@@ -68,6 +70,4 @@ deleteButtons.forEach(button => {
   }
 });
 
-
-});
 
