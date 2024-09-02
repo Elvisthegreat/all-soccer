@@ -13,6 +13,7 @@
   - [Kanban](#kanban)
   - [Epic & Overview](#epic-%-overview)
   - [ERD Diagram](#erd-diagram)
+  - [Wireframe Description for Multi-Device Project](#wireframe-description-for-multi-device-project)
   - [Design](#design)
     - [Design Idea](#design-idea)
     - [Background design](#background-design)
@@ -111,6 +112,61 @@
 
 ![Screenshot (817)](https://github.com/user-attachments/assets/7ec052f3-86a7-4ca0-b7e2-3f9d60290d5f)
 </details>
+
+
+### Wireframe Description for Multi-Device Project
+
+  ###### Overview
+
+This wireframe project, created in Figma, outlines the design and layout for a responsive website. The wireframe includes three main pages: the Homepage, Official Page, and Contact Us Page. The design adapts seamlessly across various devices, including desktop, tablet, and iPhone 14 & 15 Pro.
+
+###### Devices Covered
+- Desktop
+- Tablet
+- iPhone 14
+- iPhone 15 Pro
+
+###### Pages Included
+- Homepage
+- Official Page
+- Contact Us Page
+
+###### Detailed Descriptions
+1. Homepage
+
+- Desktop: The homepage features a full-width hero image, a navigation bar at the top, and a three-column layout for featured content. Below, there is a section for latest news and a footer with social media links.
+
+- Tablet: The layout adjusts to a two-column format for featured content, with the navigation bar becoming a collapsible menu.
+
+- iPhone 14 & 15 Pro: The design shifts to a single-column layout for easy scrolling. The navigation bar is replaced with a hamburger menu to save    
+  space.
+
+2. Official Page
+
+- Desktop: This page includes a sidebar for navigation, a main content area with text and images, and a call-to-action (CTA) button at the bottom.
+- Tablet: The sidebar becomes a top navigation bar, and the content area adjusts to fit the screen width.
+
+- iPhone 14 & 15 Pro: The sidebar is hidden, and navigation is accessible via a hamburger menu. The content is presented in a single-column format.
+
+3. Contact Us Page
+
+- Desktop: The page features a contact form on the left and a map on the right. The form includes fields for name, email, subject, and message.
+
+- Tablet: The form and map stack vertically, with the form appearing above the map.
+
+- iPhone 14 & 15 Pro: The form fields are optimized for touch input, and the map is placed below the form for easy access.
+
+###### Annotations
+- Navigation: Clear and consistent across all devices, with adjustments for screen size.
+- Responsiveness: Layouts adapt fluidly to different screen sizes, ensuring usability and accessibility.
+- Interactivity: Interactive elements like buttons and forms are designed for touch and mouse input.
+
+<details>
+<summary>View Wireframe</summary>
+
+![All/football wireframe](https://github.com/user-attachments/assets/9fb3c0ac-6ea4-41e5-8c18-b58113fdac9f)
+</details>
+
 
 ## Design
 ### Design Idea
